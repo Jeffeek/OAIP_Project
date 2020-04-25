@@ -1,0 +1,105 @@
+Примеры применения полиморфизма в С++
+
+Пример использования динамического полиморфизма.
+
+Построена иерархия игровых юнитов, где базовым является абстрактный полиморфный тип Unit, его наследник Human также является абстрактным, так как не реализует чисто виртуальный метод getDamage(), а классы Soldier и Civil
+
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <cstdlib>
+using namespace std;
+class Unit{
+protected:
+    int health;
+    virtual string getInfo() = 0;
+public:
+    Unit(int _health)
+        :health(_health)
+    {}
+    virtual void getDamage(int damage) = 0;
+friend ostream& operator<<(ostream &out, Unit *a);
+friend ostream& operator<<(ostream &out, Unit &a);
+};
+ostream& operator<<(ostream &out, Unit *a)
+{
+    out << a->getInfo();
+    return out;
+}
+ostream& operator<<(ostream &out, Unit &a)
+{
+    out << a.getInfo();
+    return out;
+}
+class Human:public Unit{
+public:
+    Human(int _health):Unit(_health)
+    {}
+};
+class Soldier:public Human{
+private:
+    static const int max_health = 100;
+protected:
+    string getInfo()
+    {
+        stringstream info;
+        info << "Soldier, health = " << health;
+        return info.str();
+    }
+public:
+    Soldier():Human(max_health)
+    {}
+    void getDamage(int damage)
+    {
+        if (health > damage) {
+            health -= damage;
+        } else {
+            health = 0;
+        }
+    }
+};
+class Civil:public Human{
+private:
+    static const int max_health = 100;
+protected:
+    string getInfo()
+    {
+        stringstream info;
+        info << "Soldier, health = " << health;
+        return info.str();
+    }
+public:
+    Civil():Human(max_health)
+    {}
+    void getDamage(int damage)
+    {
+        damage *= 2;
+        if (health > damage) {
+            health -= damage;
+        } else {
+            health = 0;
+        }
+    }
+};
+int main()
+{
+    //Unit b(100); //Can't create!
+    //Human c(100); //Can't create!
+    Unit *a[5];
+    for(int i = 0; i < 5; i++) {
+        if (rand()%2 == 1) {
+            a[i] = new Soldier();
+        } else {
+            a[i] = new Civil();
+        }
+    }
+    for(int i = 0; i < 5; i++) {
+        cout << *a[i] << endl;
+        a[i]->getDamage(10);
+        cout << a[i] << endl << endl;
+    }
+    return 0;
+}
+Можно убедиться, что в массиве указателей на юниты лежат разные типы юнитов.
+
+При этом каждый из них обрабаывается соответствующим ему образом.
