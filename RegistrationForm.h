@@ -19,9 +19,6 @@ namespace OAIPProject {
 		RegistrationForm(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
 		}
 
 	protected:
@@ -88,7 +85,7 @@ namespace OAIPProject {
 			this->gunaLabel1->Font = (gcnew System::Drawing::Font(L"Unispace", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->gunaLabel1->ForeColor = System::Drawing::Color::SpringGreen;
-			this->gunaLabel1->Location = System::Drawing::Point(134, 9);
+			this->gunaLabel1->Location = System::Drawing::Point(88, 9);
 			this->gunaLabel1->Name = L"gunaLabel1";
 			this->gunaLabel1->Size = System::Drawing::Size(231, 35);
 			this->gunaLabel1->TabIndex = 0;
@@ -107,10 +104,10 @@ namespace OAIPProject {
 			this->textBox_RegLogin->LineIdleColor = System::Drawing::Color::DeepSkyBlue;
 			this->textBox_RegLogin->LineMouseHoverColor = System::Drawing::Color::Turquoise;
 			this->textBox_RegLogin->LineThickness = 3;
-			this->textBox_RegLogin->Location = System::Drawing::Point(75, 65);
+			this->textBox_RegLogin->Location = System::Drawing::Point(39, 78);
 			this->textBox_RegLogin->Margin = System::Windows::Forms::Padding(4);
 			this->textBox_RegLogin->Name = L"textBox_RegLogin";
-			this->textBox_RegLogin->Size = System::Drawing::Size(304, 44);
+			this->textBox_RegLogin->Size = System::Drawing::Size(304, 25);
 			this->textBox_RegLogin->TabIndex = 1;
 			this->textBox_RegLogin->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
 			// 
@@ -121,16 +118,16 @@ namespace OAIPProject {
 				static_cast<System::Byte>(0)));
 			this->textBox_pass->ForeColor = System::Drawing::Color::Fuchsia;
 			this->textBox_pass->HintForeColor = System::Drawing::Color::Crimson;
-			this->textBox_pass->HintText = L"";
+			this->textBox_pass->HintText = L"*";
 			this->textBox_pass->isPassword = true;
 			this->textBox_pass->LineFocusedColor = System::Drawing::Color::BlueViolet;
 			this->textBox_pass->LineIdleColor = System::Drawing::Color::DeepSkyBlue;
 			this->textBox_pass->LineMouseHoverColor = System::Drawing::Color::Turquoise;
 			this->textBox_pass->LineThickness = 3;
-			this->textBox_pass->Location = System::Drawing::Point(75, 117);
+			this->textBox_pass->Location = System::Drawing::Point(39, 130);
 			this->textBox_pass->Margin = System::Windows::Forms::Padding(4);
 			this->textBox_pass->Name = L"textBox_pass";
-			this->textBox_pass->Size = System::Drawing::Size(304, 44);
+			this->textBox_pass->Size = System::Drawing::Size(304, 25);
 			this->textBox_pass->TabIndex = 2;
 			this->textBox_pass->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
 			// 
@@ -141,16 +138,16 @@ namespace OAIPProject {
 				static_cast<System::Byte>(0)));
 			this->textBox_repPass->ForeColor = System::Drawing::Color::Fuchsia;
 			this->textBox_repPass->HintForeColor = System::Drawing::Color::Crimson;
-			this->textBox_repPass->HintText = L"";
+			this->textBox_repPass->HintText = L"*";
 			this->textBox_repPass->isPassword = true;
 			this->textBox_repPass->LineFocusedColor = System::Drawing::Color::BlueViolet;
 			this->textBox_repPass->LineIdleColor = System::Drawing::Color::DeepSkyBlue;
 			this->textBox_repPass->LineMouseHoverColor = System::Drawing::Color::Turquoise;
 			this->textBox_repPass->LineThickness = 3;
-			this->textBox_repPass->Location = System::Drawing::Point(75, 169);
+			this->textBox_repPass->Location = System::Drawing::Point(39, 185);
 			this->textBox_repPass->Margin = System::Windows::Forms::Padding(4);
 			this->textBox_repPass->Name = L"textBox_repPass";
-			this->textBox_repPass->Size = System::Drawing::Size(304, 44);
+			this->textBox_repPass->Size = System::Drawing::Size(304, 25);
 			this->textBox_repPass->TabIndex = 3;
 			this->textBox_repPass->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
 			// 
@@ -159,7 +156,7 @@ namespace OAIPProject {
 			this->button_applyUser->BackColor = System::Drawing::Color::SeaGreen;
 			this->button_applyUser->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button_applyUser.Image")));
 			this->button_applyUser->ImageActive = nullptr;
-			this->button_applyUser->Location = System::Drawing::Point(75, 229);
+			this->button_applyUser->Location = System::Drawing::Point(39, 232);
 			this->button_applyUser->Name = L"button_applyUser";
 			this->button_applyUser->Size = System::Drawing::Size(304, 40);
 			this->button_applyUser->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -174,7 +171,7 @@ namespace OAIPProject {
 			this->button_PassVisibility->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button_PassVisibility->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button_PassVisibility.Image")));
 			this->button_PassVisibility->ImageActive = nullptr;
-			this->button_PassVisibility->Location = System::Drawing::Point(389, 136);
+			this->button_PassVisibility->Location = System::Drawing::Point(348, 130);
 			this->button_PassVisibility->Name = L"button_PassVisibility";
 			this->button_PassVisibility->Size = System::Drawing::Size(25, 25);
 			this->button_PassVisibility->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -189,7 +186,7 @@ namespace OAIPProject {
 			this->label_login->Font = (gcnew System::Drawing::Font(L"Unispace", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label_login->ForeColor = System::Drawing::Color::Aqua;
-			this->label_login->Location = System::Drawing::Point(211, 60);
+			this->label_login->Location = System::Drawing::Point(175, 56);
 			this->label_login->Name = L"label_login";
 			this->label_login->Size = System::Drawing::Size(59, 19);
 			this->label_login->TabIndex = 24;
@@ -201,7 +198,7 @@ namespace OAIPProject {
 			this->label_pass->Font = (gcnew System::Drawing::Font(L"Unispace", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label_pass->ForeColor = System::Drawing::Color::Aqua;
-			this->label_pass->Location = System::Drawing::Point(192, 113);
+			this->label_pass->Location = System::Drawing::Point(156, 110);
 			this->label_pass->Name = L"label_pass";
 			this->label_pass->Size = System::Drawing::Size(89, 19);
 			this->label_pass->TabIndex = 25;
@@ -213,7 +210,7 @@ namespace OAIPProject {
 			this->labelRep_pass->Font = (gcnew System::Drawing::Font(L"Unispace", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelRep_pass->ForeColor = System::Drawing::Color::Aqua;
-			this->labelRep_pass->Location = System::Drawing::Point(157, 165);
+			this->labelRep_pass->Location = System::Drawing::Point(121, 164);
 			this->labelRep_pass->Name = L"labelRep_pass";
 			this->labelRep_pass->Size = System::Drawing::Size(159, 19);
 			this->labelRep_pass->TabIndex = 26;
@@ -224,7 +221,7 @@ namespace OAIPProject {
 			this->imageButton_exit->BackColor = System::Drawing::Color::Red;
 			this->imageButton_exit->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"imageButton_exit.Image")));
 			this->imageButton_exit->ImageActive = nullptr;
-			this->imageButton_exit->Location = System::Drawing::Point(423, 2);
+			this->imageButton_exit->Location = System::Drawing::Point(360, 2);
 			this->imageButton_exit->Name = L"imageButton_exit";
 			this->imageButton_exit->Size = System::Drawing::Size(20, 20);
 			this->imageButton_exit->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -238,7 +235,7 @@ namespace OAIPProject {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Black;
-			this->ClientSize = System::Drawing::Size(445, 292);
+			this->ClientSize = System::Drawing::Size(383, 292);
 			this->Controls->Add(this->imageButton_exit);
 			this->Controls->Add(this->labelRep_pass);
 			this->Controls->Add(this->label_pass);
@@ -312,18 +309,18 @@ private: System::Void imageButton_exit_Click(System::Object^ sender, System::Eve
 }
 private: System::Void button_PassVisibility_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(RegistrationForm::typeid));
+	System::ComponentModel::ComponentResourceManager^ resources2 = (gcnew System::ComponentModel::ComponentResourceManager(RegistrationForm::typeid));
 	if (textBox_pass->isPassword)
 	{
-		button_PassVisibility->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"eye_show")));
+		//button_PassVisibility->Image = (cli::safe_cast<System::Drawing::Image^>(resources2->GetObject(L"IDB_PNG2")));
+		button_PassVisibility->Image = Image::FromFile("Images\\eye_show.png");
 		textBox_pass->isPassword = false;
-		textBox_repPass->isPassword = false;
 	}
 	else
 	{
-		button_PassVisibility->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"eye_hide")));
+		//button_PassVisibility->Image = (cli::safe_cast<System::Drawing::Image^>(resources2->GetObject(L"IDB_PNG1")));
+		button_PassVisibility->Image = Image::FromFile("Images\\eye_hide.png");
 		textBox_pass->isPassword = true;
-		textBox_repPass->isPassword = true;
 	}
 }
 };

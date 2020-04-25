@@ -289,7 +289,7 @@ namespace OAIPProject {
 			this->imageButton_exit->BackColor = System::Drawing::Color::Crimson;
 			this->imageButton_exit->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"imageButton_exit.Image")));
 			this->imageButton_exit->ImageActive = nullptr;
-			this->imageButton_exit->Location = System::Drawing::Point(652, 5);
+			this->imageButton_exit->Location = System::Drawing::Point(650, 6);
 			this->imageButton_exit->Name = L"imageButton_exit";
 			this->imageButton_exit->Size = System::Drawing::Size(20, 20);
 			this->imageButton_exit->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
