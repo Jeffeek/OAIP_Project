@@ -134,6 +134,7 @@ namespace OAIPProject {
 			// 
 			// DataGridTables
 			// 
+			this->DataGridTables->AllowUserToDeleteRows = false;
 			dataGridViewCellStyle1->BackColor = System::Drawing::Color::White;
 			this->DataGridTables->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this->DataGridTables->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;

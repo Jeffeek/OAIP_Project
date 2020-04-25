@@ -298,6 +298,7 @@ private: System::Void imageButton_login_Click(System::Object^ sender, System::Ev
 			{
 				int ID;
 				String^ PassedThemesLine;
+				List<String^>Passed;
 				while (reader->Read())
 				{
 					ID = reader->GetInt32(0);
@@ -310,9 +311,15 @@ private: System::Void imageButton_login_Click(System::Object^ sender, System::Ev
 					FF->Show();
 				}
 				else
-				{
+				{					
 					cli::array<String^>^ PassedThemeArr = PassedThemesLine->Split(',');
-					MAINform^ f2 = gcnew MAINform(ID, PassedThemeArr);
+					Passed.AddRange(PassedThemeArr);
+					List<int>^PassedINT = gcnew List<int>();
+					for (int i = 0; i < Passed.Count; i++)
+					{
+						PassedINT->Add(Convert::ToInt32(Passed[i]));
+					}
+					MAINform^ f2 = gcnew MAINform(ID, PassedINT);
 					f2->Show();
 					this->Hide();
 				}

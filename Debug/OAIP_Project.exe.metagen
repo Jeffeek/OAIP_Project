@@ -77,7 +77,7 @@ Class OAIPProject.Testing: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     GetQuestion_3(): PrivateScope, Public, HideBySig
 Class OAIPProject.MAINform: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(Int32, System.String[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, System.Collections.Generic.List`1[System.Int32]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.Collections.Generic.List`1[OAIPProject.Themes] THEMES IsByValue : Public, InitOnly
     System.Collections.Generic.List`1[OAIPProject.Testing] TESTS IsByValue : Public, InitOnly

@@ -27,9 +27,9 @@ namespace OAIPProject {
 	private:
 		int ID;
 		int TestIDselected;
-		cli::array<String^>^ ThemesWellDone;
+		//cli::array<String^>^ ThemesWellDone;
+		List<int>ThemesWellDone;
 		String^ RightAns;
-
 	private: Bunifu::Framework::UI::BunifuImageButton^ imageButton_exit;
 	private: Bunifu::Framework::UI::BunifuDropdown^ bunifuDropdownTHEMES;
 	private: Bunifu::Framework::UI::BunifuDropdown^ bunifuDropdownDIFFICULTY;
@@ -52,11 +52,14 @@ namespace OAIPProject {
 		List<Testing^>TESTS;
 
 	public:
-		MAINform(int id, cli::array<String^>^ Themes)
+		MAINform(int id, List<int>^LOLIK)
 		{
 			InitializeComponent();
 			ID = id;
-			ThemesWellDone = Themes;
+			for (int i = 0; i < LOLIK->Count; i++)
+			{
+				ThemesWellDone.Add(LOLIK[i]);
+			}
 		}
 
 	protected:
@@ -424,13 +427,9 @@ private:
 			{
 				checkedListBoxTHEMES->Items->Add(THEMES[i]->GetName());
 				bunifuDropdownTHEMES->AddItem(THEMES[i]->GetName());
-				for (int j = 0; j < ThemesWellDone->LongLength; j++)
+				if (ThemesWellDone.Contains(THEMES[i]->GetID()))
 				{
-					if (Convert::ToInt32(ThemesWellDone[j]) == THEMES[i]->GetID())
-					{
-						checkedListBoxTHEMES->SetItemChecked(i, true);
-						break;
-					}
+					checkedListBoxTHEMES->SetItemChecked(i, true);
 				}
 			}
 		}
@@ -441,18 +440,15 @@ private:
 			int ptr = 0;
 			for (int i = 0; i < THEMES.Count; i++)
 			{
-				if (THEMES[i]->GetDifficultyString() == Parameter) {					
+				if (THEMES[i]->GetDifficultyString() == Parameter) 
+				{					
 					checkedListBoxTHEMES->Items->Add(THEMES[i]->GetName());
 					bunifuDropdownTHEMES->AddItem(THEMES[i]->GetName());
-					for (int j = 0; j < ThemesWellDone->LongLength; j++)
+					if (ThemesWellDone.Contains(THEMES[i]->GetID()))
 					{
-						if (Convert::ToInt32(ThemesWellDone[j]) == THEMES[i]->GetID())
-						{
-							checkedListBoxTHEMES->SetItemChecked(ptr, true);
-							ptr++;
-							break;
-						}
+						checkedListBoxTHEMES->SetItemChecked(ptr, true);
 					}
+					ptr++;
 				}
 			}
 		}
@@ -481,7 +477,7 @@ private:
 			}
 			catch (Exception^ e)
 			{
-				MessageBox::Show(" sdljkf" + e->ToString());
+				MessageBox::Show("ньхайю " + e->ToString());
 			}
 			finally
 			{
@@ -494,13 +490,13 @@ private: System::Void MAINform_Load(System::Object^ sender, System::EventArgs^ e
 		bunifuDropdownDIFFICULTY->selectedIndex = 0;
 		FillThemesDB();
 		labelID->Text = "ID: " + ID;
-		if (ThemesWellDone->LongLength == 1 && ThemesWellDone[0] == "0")
+		if (ThemesWellDone.Count == 1 && ThemesWellDone[0] == 0)
 		{
 			labelThemesCount->Text = " опнидемн рел: 0 / " + THEMES.Count;
 		}
 		else
 		{
-			labelThemesCount->Text = "опнидемн рел : " + (ThemesWellDone->LongLength - 1) + " / " + THEMES.Count;
+			labelThemesCount->Text = "опнидемн рел : " + (ThemesWellDone.Count - 1) + " / " + THEMES.Count;
 		}		
 		FillListBox();
 		FillTest();
@@ -530,7 +526,7 @@ private: System::Void bunifuDropdownDIFFICULTY_onItemSelected(System::Object^ se
 	else
 	{
 		bunifuDropdownTHEMES->Clear();
-		FillListBoxParametrised(Convert::ToString(bunifuDropdownDIFFICULTY->selectedValue));
+		FillListBoxParametrised(bunifuDropdownDIFFICULTY->selectedValue->ToString());
 	}
 	bunifuDropdownTHEMES->selectedIndex = 0;
 	richTextBoxTHEME_TEXT->Clear();
@@ -538,36 +534,23 @@ private: System::Void bunifuDropdownDIFFICULTY_onItemSelected(System::Object^ se
 
 private: System::Void bunifuDropdownTHEMES_onItemSelected(System::Object^ sender, System::EventArgs^ e) 
 {
-	int ind = 0;
-	for (int i = 0; i < THEMES.Count; i++)
-	{
-		if (THEMES[i]->GetName() == bunifuDropdownTHEMES->selectedValue)
+		if (ThemesWellDone.Contains(THEMES[bunifuDropdownTHEMES->selectedIndex]->GetID()))
 		{
-			ind = i;
-			for (int j = 0; j < ThemesWellDone->LongLength; j++)
-			{
-				if (THEMES[i]->GetID() == Convert::ToInt32(ThemesWellDone[j]))
-				{
-					imageButtonTEST->BackColor = Color::SeaGreen;
-					imageButtonTEST->Image = Image::FromFile("Images\\ok.png");
-					imageButtonTEST->Enabled = false;
-					labelIStestPASSED->Text = "реяр опнидем";
-					labelIStestPASSED->ForeColor = Color::SpringGreen;
-					break;
-				}
-				else
-				{
-					imageButtonTEST->BackColor = Color::SlateGray;
-					imageButtonTEST->Image = Image::FromFile("Images\\X.png");
-					imageButtonTEST->Enabled = true;
-					labelIStestPASSED->Text = "реяр ме опнидем";
-					labelIStestPASSED->ForeColor = Color::Crimson;
-				}
-			}
-			break;
+			imageButtonTEST->BackColor = Color::SeaGreen;
+			imageButtonTEST->Image = Image::FromFile("Images\\ok.png");
+			imageButtonTEST->Enabled = false;
+			labelIStestPASSED->Text = "реяр опнидем";
+			labelIStestPASSED->ForeColor = Color::SpringGreen;
 		}
-	}
-	StreamReader^ reader = gcnew StreamReader(THEMES[ind]->GetFilePath());
+		else
+		{
+			imageButtonTEST->BackColor = Color::SlateGray;
+			imageButtonTEST->Image = Image::FromFile("Images\\X.png");
+			imageButtonTEST->Enabled = true;
+			labelIStestPASSED->Text = "реяр ме опнидем";
+			labelIStestPASSED->ForeColor = Color::Crimson;
+		}
+	StreamReader^ reader = gcnew StreamReader(THEMES[bunifuDropdownTHEMES->selectedIndex]->GetFilePath());
 	richTextBoxTHEME_TEXT->Text = reader->ReadToEnd();
 	reader->Close();
 	delete reader;
@@ -578,17 +561,8 @@ private: System::Void imageButtonTEST_Click(System::Object^ sender, System::Even
 	richTextBoxTHEME_TEXT->Text = "";
 	panelMAIN->Enabled = false;
 	bunifuDropdownTHEMES->Enabled = false;
-	int IND = 0;
-	for (int i = 0; i < THEMES.Count; i++)
-	{
-		if (Convert::ToString(bunifuDropdownTHEMES->selectedValue) == THEMES[i]->GetName())
-		{
-			IND = i;
-			break;
-		}
-	}
 	this->ClientSize = System::Drawing::Size(678, 656);
-	FillTestJopa(TESTS[IND]);
+	FillTestJopa(TESTS[bunifuDropdownTHEMES->selectedIndex]);
 }
 
 private: void FillTest()
@@ -695,7 +669,14 @@ private: void fillDataBaseWithTheCorrectAns()
 		SQLiteCommand^ cmd2 = con->CreateCommand();
 		cmd2->CommandText = "UPDATE Users SET PassedThemes=" + "'" + strRIGHTANSers + "' WHERE ID=" + ID + ";";
 		cmd2->ExecuteNonQuery();
-		ThemesWellDone = strRIGHTANSers->Split(',');
+		ThemesWellDone.Clear();
+		cli::array<String^>^ PassedThemeString = strRIGHTANSers->Split(',');
+		List<String^>Passed;
+		Passed.AddRange(PassedThemeString);
+		for (int i = 0; i < Passed.Count; i++)
+		{
+			ThemesWellDone.Add(Convert::ToInt32(Passed[i]));
+		}
 		delete cmd2;
 		con->Close();
 		this->ClientSize = System::Drawing::Size(678, 419);
