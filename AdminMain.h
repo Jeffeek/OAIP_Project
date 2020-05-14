@@ -217,12 +217,12 @@ namespace OAIPProject {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label3->ForeColor = System::Drawing::Color::MediumSeaGreen;
-			this->label3->Location = System::Drawing::Point(12, 245);
+			this->label3->Location = System::Drawing::Point(6, 245);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(123, 15);
+			this->label3->Size = System::Drawing::Size(135, 17);
 			this->label3->TabIndex = 6;
 			this->label3->Text = L"»«Ã≈Õ»“‹ ƒ¿ÕÕ€≈";
 			// 
@@ -326,6 +326,7 @@ private: System::Void comboBox_OpenTable_onItemSelected(System::Object^ sender, 
 			}
 		}
 	}
+
 	for (int i = 0; i < DataGridTables->ColumnCount; i++) 
 	{
 		for (int j = 0; DataGridTables->RowCount; j++)
@@ -342,7 +343,6 @@ private: System::Void comboBox_OpenTable_onItemSelected(System::Object^ sender, 
 		}
 	}
 	DataGridTables->ColumnHeadersHeight = 25;
-
 }
 };
 }

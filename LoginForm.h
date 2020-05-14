@@ -351,13 +351,19 @@ private: System::Void button_PassVisibility_Click(System::Object^ sender, System
 	System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(LoginForm::typeid));
 	if (textBoxPASS->isPassword)
 	{
+		FileStream^ stream = gcnew FileStream(Directory::GetCurrentDirectory() + "\\Images\\eye_show.png", FileMode::Open);
+		button_PassVisibility->Image = Image::FromStream(stream);
+		stream->Close();
+		delete stream;
 		textBoxPASS->isPassword = false;
-		button_PassVisibility->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"eye_show")));
 	}
 	else 
 	{
+		FileStream^ stream = gcnew FileStream(Directory::GetCurrentDirectory() + "\\Images\\eye_hide.png", FileMode::Open);
+		button_PassVisibility->Image = Image::FromStream(stream);
+		stream->Close();
+		delete stream;
 		textBoxPASS->isPassword = true;
-		this->button_PassVisibility->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"eye_hide")));
 	}
 }
 private: System::Void link_FP_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) 

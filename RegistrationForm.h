@@ -9,6 +9,7 @@ namespace OAIPProject {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::Data::SQLite;
+	using namespace System::IO;
 
 	/// <summary>
 	/// Сводка для RegistrationForm
@@ -118,8 +119,8 @@ namespace OAIPProject {
 				static_cast<System::Byte>(0)));
 			this->textBox_pass->ForeColor = System::Drawing::Color::Fuchsia;
 			this->textBox_pass->HintForeColor = System::Drawing::Color::Crimson;
-			this->textBox_pass->HintText = L"*";
-			this->textBox_pass->isPassword = true;
+			this->textBox_pass->HintText = L"";
+			this->textBox_pass->isPassword = false;
 			this->textBox_pass->LineFocusedColor = System::Drawing::Color::BlueViolet;
 			this->textBox_pass->LineIdleColor = System::Drawing::Color::DeepSkyBlue;
 			this->textBox_pass->LineMouseHoverColor = System::Drawing::Color::Turquoise;
@@ -138,7 +139,7 @@ namespace OAIPProject {
 				static_cast<System::Byte>(0)));
 			this->textBox_repPass->ForeColor = System::Drawing::Color::Fuchsia;
 			this->textBox_repPass->HintForeColor = System::Drawing::Color::Crimson;
-			this->textBox_repPass->HintText = L"*";
+			this->textBox_repPass->HintText = L"";
 			this->textBox_repPass->isPassword = true;
 			this->textBox_repPass->LineFocusedColor = System::Drawing::Color::BlueViolet;
 			this->textBox_repPass->LineIdleColor = System::Drawing::Color::DeepSkyBlue;
@@ -250,6 +251,8 @@ namespace OAIPProject {
 			this->Name = L"RegistrationForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"RegistrationForm";
+			this->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &RegistrationForm::RegistrationForm_MouseDown);
+			this->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &RegistrationForm::RegistrationForm_MouseMove);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->button_applyUser))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->button_PassVisibility))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->imageButton_exit))->EndInit();
@@ -312,16 +315,35 @@ private: System::Void button_PassVisibility_Click(System::Object^ sender, System
 	System::ComponentModel::ComponentResourceManager^ resources2 = (gcnew System::ComponentModel::ComponentResourceManager(RegistrationForm::typeid));
 	if (textBox_pass->isPassword)
 	{
-		//button_PassVisibility->Image = (cli::safe_cast<System::Drawing::Image^>(resources2->GetObject(L"IDB_PNG2")));
-		button_PassVisibility->Image = Image::FromFile("Images\\eye_show.png");
+		FileStream^ stream = gcnew FileStream(Directory::GetCurrentDirectory() + "\\Images\\eye_show.png", FileMode::Open);
+		button_PassVisibility->Image = Image::FromStream(stream);
+		stream->Close();
+		delete stream;
 		textBox_pass->isPassword = false;
 	}
 	else
 	{
-		//button_PassVisibility->Image = (cli::safe_cast<System::Drawing::Image^>(resources2->GetObject(L"IDB_PNG1")));
-		button_PassVisibility->Image = Image::FromFile("Images\\eye_hide.png");
+		FileStream^ stream = gcnew FileStream(Directory::GetCurrentDirectory() + "\\Images\\eye_hide.png", FileMode::Open);
+		button_PassVisibility->Image = Image::FromStream(stream);
+		stream->Close();
+		delete stream;
 		textBox_pass->isPassword = true;
 	}
+}
+
+private:
+	Point^ lastPoint;
+private: System::Void RegistrationForm_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) 
+{
+	if (e->Button == System::Windows::Forms::MouseButtons::Left)
+	{
+		Left += e->X - lastPoint->X;
+		Top += e->Y - lastPoint->Y;
+	}
+}
+private: System::Void RegistrationForm_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) 
+{
+	lastPoint = e->Location;
 }
 };
 }
