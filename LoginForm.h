@@ -41,9 +41,6 @@ namespace OAIPProject {
 		LoginForm(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
 		}
 
 	protected:
@@ -124,6 +121,7 @@ namespace OAIPProject {
 			this->textBoxLOGIN->Name = L"textBoxLOGIN";
 			this->textBoxLOGIN->Size = System::Drawing::Size(236, 36);
 			this->textBoxLOGIN->TabIndex = 12;
+			this->textBoxLOGIN->TabStop = false;
 			this->textBoxLOGIN->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
 			// 
 			// textBoxPASS
@@ -144,6 +142,7 @@ namespace OAIPProject {
 			this->textBoxPASS->Name = L"textBoxPASS";
 			this->textBoxPASS->Size = System::Drawing::Size(236, 36);
 			this->textBoxPASS->TabIndex = 13;
+			this->textBoxPASS->TabStop = false;
 			this->textBoxPASS->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
 			// 
 			// labelLOGin
@@ -169,7 +168,7 @@ namespace OAIPProject {
 			this->gunaLabel1->Location = System::Drawing::Point(115, 134);
 			this->gunaLabel1->Name = L"gunaLabel1";
 			this->gunaLabel1->Size = System::Drawing::Size(133, 29);
-			this->gunaLabel1->TabIndex = 15;
+			this->gunaLabel1->TabIndex = 0;
 			this->gunaLabel1->Text = L"PASSWORD";
 			// 
 			// link_REGISTRATION
@@ -269,6 +268,8 @@ namespace OAIPProject {
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"LoginForm";
 			this->Load += gcnew System::EventHandler(this, &LoginForm::LoginForm_Load);
+			this->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &LoginForm::LoginForm_MouseDown);
+			this->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &LoginForm::LoginForm_MouseMove);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->imageButton_login))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->imageButton_exit))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->button_PassVisibility))->EndInit();
@@ -298,7 +299,7 @@ private: System::Void imageButton_login_Click(System::Object^ sender, System::Ev
 			{
 				int ID;
 				String^ PassedThemesLine;
-				List<String^>Passed;
+				List<String^> Passed;
 				while (reader->Read())
 				{
 					ID = reader->GetInt32(0);
@@ -311,10 +312,10 @@ private: System::Void imageButton_login_Click(System::Object^ sender, System::Ev
 					FF->Show();
 				}
 				else
-				{					
+				{
 					cli::array<String^>^ PassedThemeArr = PassedThemesLine->Split(',');
 					Passed.AddRange(PassedThemeArr);
-					List<int>^PassedINT = gcnew List<int>();
+					List<int>^ PassedINT = gcnew List<int>();
 					for (int i = 0; i < Passed.Count; i++)
 					{
 						PassedINT->Add(Convert::ToInt32(Passed[i]));
@@ -326,7 +327,7 @@ private: System::Void imageButton_login_Click(System::Object^ sender, System::Ev
 			}
 			else
 			{
-				MessageBox::Show("NOPE");
+				MessageBox::Show("Такого пользователя нет");
 			}
 
 		}
@@ -379,6 +380,20 @@ private: System::Void link_REGISTRATION_LinkClicked(System::Object^ sender, Syst
 	this->Hide();
 	REGform->ShowDialog();
 	this->Show();
+}
+private:
+	Point^ lastPoint;
+private: System::Void LoginForm_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
+{
+	if (e->Button == System::Windows::Forms::MouseButtons::Left)
+	{
+		Left += e->X - lastPoint->X;
+		Top += e->Y - lastPoint->Y;
+	}
+}
+private: System::Void LoginForm_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
+{
+	lastPoint = e->Location;
 }
 };
 }

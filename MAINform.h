@@ -201,6 +201,8 @@ namespace OAIPProject {
 			this->panelHEADER->Name = L"panelHEADER";
 			this->panelHEADER->Size = System::Drawing::Size(439, 24);
 			this->panelHEADER->TabIndex = 2;
+			this->panelHEADER->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MAINform::panelHEADER_MouseDown);
+			this->panelHEADER->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MAINform::panelHEADER_MouseMove);
 			// 
 			// labelThemesCount
 			// 
@@ -313,7 +315,7 @@ namespace OAIPProject {
 			// xuiRadioQ_3
 			// 
 			this->xuiRadioQ_3->Checked = false;
-			this->xuiRadioQ_3->Font = (gcnew System::Drawing::Font(L"Times New Roman", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->xuiRadioQ_3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->xuiRadioQ_3->ForeColor = System::Drawing::Color::Turquoise;
 			this->xuiRadioQ_3->Location = System::Drawing::Point(75, 136);
@@ -331,7 +333,7 @@ namespace OAIPProject {
 			// xuiRadioQ_2
 			// 
 			this->xuiRadioQ_2->Checked = false;
-			this->xuiRadioQ_2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->xuiRadioQ_2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->xuiRadioQ_2->ForeColor = System::Drawing::Color::Turquoise;
 			this->xuiRadioQ_2->Location = System::Drawing::Point(75, 108);
@@ -349,7 +351,7 @@ namespace OAIPProject {
 			// xuiRadioQ_1
 			// 
 			this->xuiRadioQ_1->Checked = false;
-			this->xuiRadioQ_1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->xuiRadioQ_1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->xuiRadioQ_1->ForeColor = System::Drawing::Color::Turquoise;
 			this->xuiRadioQ_1->Location = System::Drawing::Point(75, 80);
@@ -391,7 +393,7 @@ namespace OAIPProject {
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::Black;
-			this->ClientSize = System::Drawing::Size(676, 418);
+			this->ClientSize = System::Drawing::Size(676, 419);
 			this->ControlBox = false;
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->imageButton_exit);
@@ -614,39 +616,42 @@ private: System::Void bunifuImageButtonQUESTION_Click(System::Object^ sender, Sy
 	{
 		if (xuiRadioQ_1->Text == RightAns)
 		{
-			MessageBox::Show("YES");
+			MessageBox::Show("Ответ верный!");
 			fillDataBaseWithTheCorrectAns();
 		}
 		else
 		{
-			MessageBox::Show("NO");
+			MessageBox::Show("Ответ неверный!");
 		}
 	}
 	else if (xuiRadioQ_2->Checked)
 	{
 		if (xuiRadioQ_2->Text == RightAns)
 		{
-			MessageBox::Show("YES");
+			MessageBox::Show("Ответ верный!");
 			fillDataBaseWithTheCorrectAns();
 
 		}
 		else
 		{
-			MessageBox::Show("NO");
+			MessageBox::Show("Ответ неверный!");
 		}
 	}
 	else if (xuiRadioQ_3->Checked)
 	{
 		if (xuiRadioQ_3->Text == RightAns)
 		{
-			MessageBox::Show("YES");
+			MessageBox::Show("Ответ верный!");
 			fillDataBaseWithTheCorrectAns();
 		}
 		else
 		{
-			MessageBox::Show("NO");
+			MessageBox::Show("Ответ неверный!");
 		}
 	}
+	this->ClientSize = System::Drawing::Size(678, 419);
+	panelMAIN->Enabled = true;
+	bunifuDropdownTHEMES->Enabled = true;
 }
 
 private: System::Void xuiRadioQ_Click(System::Object^ sender, System::EventArgs^ e) 
@@ -679,7 +684,7 @@ private: void fillDataBaseWithTheCorrectAns()
 		}
 		delete cmd2;
 		con->Close();
-		this->ClientSize = System::Drawing::Size(678, 419);
+		//this->ClientSize = System::Drawing::Size(678, 419);
 		MAINform_Load(gcnew Object, gcnew EventArgs);
 	}
 	catch (Exception^ e)
@@ -690,6 +695,20 @@ private: void fillDataBaseWithTheCorrectAns()
 	{
 		delete con;
 	}
+}		
+private:
+Point^ lastPoint;
+private: System::Void panelHEADER_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
+{
+	if (e->Button == System::Windows::Forms::MouseButtons::Left)
+	{
+		Left += e->X - lastPoint->X;
+		Top += e->Y - lastPoint->Y;
+	}
+}
+private: System::Void panelHEADER_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
+{
+	lastPoint = e->Location;
 }
 };
 }

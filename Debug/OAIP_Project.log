@@ -1,6 +1,4 @@
 ﻿E:\VS\MSBuild\Microsoft\VC\v160\Microsoft.MetaGen.targets(91,5): warning : Отсутствует обязательный файл "C:\USERS\михаил\DESKTOP\BUNIFU_UI_V1.52.DLL".
   LoginForm.cpp
-  RegistrationForm.cpp
-  Создание кода...
   AdminMain.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   OAIP_Project.vcxproj -> E:\projectsVS\OAIP_Project\Debug\OAIP_Project.exe
