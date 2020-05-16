@@ -58,31 +58,34 @@ Class OAIPProject.Themes: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     GetDifficultyInt(): PrivateScope, Public, HideBySig
     SetDifficulty(String): PrivateScope, Public, HideBySig
     GetDifficultyString(): PrivateScope, Public, HideBySig
-Class OAIPProject.Testing: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class OAIP_Project.Quest: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
-    SetQuestion_1(String): PrivateScope, Public, HideBySig
-    SetQuestion_2(String): PrivateScope, Public, HideBySig
-    SetQuestion_3(String): PrivateScope, Public, HideBySig
-    SetQUEST(String): PrivateScope, Public, HideBySig
-    GetQUEST(): PrivateScope, Public, HideBySig
-    SetRightAnswer(String): PrivateScope, Public, HideBySig
-    SetID(Int32): PrivateScope, Public, HideBySig
-    SetThemeID(Int32): PrivateScope, Public, HideBySig
-    GetRightAnswer(): PrivateScope, Public, HideBySig
+    GetQuestID(): PrivateScope, Public, HideBySig
+    SetQuestID(Int32): PrivateScope, Public, HideBySig
     GetThemeID(): PrivateScope, Public, HideBySig
-    GetID(): PrivateScope, Public, HideBySig
-    GetQuestion_1(): PrivateScope, Public, HideBySig
-    GetQuestion_2(): PrivateScope, Public, HideBySig
-    GetQuestion_3(): PrivateScope, Public, HideBySig
+    SetThemeID(Int32): PrivateScope, Public, HideBySig
+    GetQuest(): PrivateScope, Public, HideBySig
+    SetQuest(String): PrivateScope, Public, HideBySig
+    GetFirstQuestionText(): PrivateScope, Public, HideBySig
+    SetFirstQuestionText(String): PrivateScope, Public, HideBySig
+    GetSecondQuestionText(): PrivateScope, Public, HideBySig
+    SetSecondQuestionText(String): PrivateScope, Public, HideBySig
+    GetThirdQuestionText(): PrivateScope, Public, HideBySig
+    SetThirdQuestionText(String): PrivateScope, Public, HideBySig
+    GetRightAnswerText(): PrivateScope, Public, HideBySig
+    SetRightAnswerText(String): PrivateScope, Public, HideBySig
+Class OAIP_Project.Testing: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetThemeID(): PrivateScope, Public, HideBySig
+    SetThemeID(Int32): PrivateScope, Public, HideBySig
+    GetQuestByNumber(Int32): PrivateScope, Public, HideBySig
 Class OAIPProject.MAINform: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(Int32, System.Collections.Generic.List`1[System.Int32]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Fields:
-    System.Collections.Generic.List`1[OAIPProject.Themes] THEMES IsByValue : Public, InitOnly
-    System.Collections.Generic.List`1[OAIPProject.Testing] TESTS IsByValue : Public, InitOnly
   Methods:
-    FillTestJopa(Testing): PrivateScope, Public, HideBySig
+    FillTesting(Testing): PrivateScope, Public, HideBySig
 Class OAIPProject.RegistrationForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

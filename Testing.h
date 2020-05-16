@@ -6,14 +6,16 @@
 #include <algorithm>
 #include <vector>
 #include "Themes.h"
-namespace OAIPProject 
+#include "Quest.h"
+
+namespace OAIP_Project 
 {
 	using namespace std;
 	using namespace System;
 	using namespace System::Windows::Forms;
 	using namespace Windows::Forms::Design;
 	using namespace System::ComponentModel;
-	using namespace System::Collections;
+	using namespace System::Collections::Generic;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
@@ -26,84 +28,74 @@ namespace OAIPProject
 	public ref class Testing
 	{
 	private:
-		String^ QUEST;
-		String^ Question_1;
-		String^ Question_2;
-		String^ Question_3;
-		String^ RightAnswer;
-		int ID;
-		int ThemeID;
+		int _themeID;
+		List<Quest^>QuestList;
 	public:
-		void SetQuestion_1(String^ Q)
+
+		Testing(int themeID)
 		{
-			Question_1 = Q;
+			_themeID = themeID;
+			FillThemeTest();
+		}
+	private:
+		//TODO: доделать сбор вопросов для теста
+		void FillThemeTest()
+		{
+			SQLiteConnection^ db = gcnew SQLiteConnection("Data Source=" + "DataBases\\OAiP.db");
+			try
+			{
+				db->Open();
+				try
+				{
+					SQLiteCommand^ cmd = db->CreateCommand();
+					cmd->CommandText = "SELECT * FROM TESTs WHERE ThemeID=" + _themeID;
+					SQLiteDataReader^ reader = cmd->ExecuteReader();
+					while (reader->Read())
+					{
+						Quest^ quest = gcnew Quest();
+						quest->SetQuestID(reader->GetInt32(0));
+						quest->SetThemeID(reader->GetInt32(1));
+						quest->SetFirstQuestionText(reader->GetString(2));
+						quest->SetSecondQuestionText(reader->GetString(3));
+						quest->SetThirdQuestionText(reader->GetString(4));
+						quest->SetRightAnswerText(reader->GetString(5));
+						quest->SetQuest(reader->GetString(6));
+
+						QuestList.Add(quest);
+					}
+					reader->Close();
+					delete static_cast<IDisposable^>(reader);
+				}
+				catch (Exception^ e)
+				{
+					MessageBox::Show("Error Executing SQL: " + e->ToString(), "Exception While Displaying MyTable ...");
+				}
+
+				db->Close();
+			}
+			finally
+			{
+				delete static_cast<IDisposable^>(db);
+			}
 		}
 
-		void SetQuestion_2(String^ Q2)
-		{
-			Question_2 = Q2;
-		}
-
-		void SetQuestion_3(String^ Q3)
-		{
-			Question_3 = Q3;
-		}
-
-		void SetQUEST(String^ text)
-		{
-			QUEST = text;
-		}
-
-		String^ GetQUEST()
-		{
-			return QUEST;
-		}
-
-		void SetRightAnswer(String^ RightAnswer)
-		{
-			this->RightAnswer = RightAnswer;
-		}
-
-		void SetID(int ID)
-		{
-			this->ID = ID;
-		}
-
-		void SetThemeID(int ThemeID)
-		{
-			this->ThemeID = ThemeID;
-		}
-
-		String^ GetRightAnswer()
-		{
-			return RightAnswer;
-		}
-
+	public:
 		int GetThemeID()
 		{
-			return ThemeID;
+			return _themeID;
 		}
 
-		int GetID()
+		void SetThemeID(int id)
 		{
-			return ID;
+			_themeID = id;
 		}
 
-		String^ GetQuestion_1()
+		Quest^ GetQuestByNumber(int id)
 		{
-			return Question_1;
+			if (id < 0 || id > 2)
+				throw gcnew Exception;
+			return QuestList[id];
 		}
-
-		String^ GetQuestion_2()
-		{
-			return Question_2;
-		}
-
-		String^ GetQuestion_3()
-		{
-			return Question_3;
-		}
-
 	};
 }
 

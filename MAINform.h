@@ -26,31 +26,24 @@ namespace OAIPProject {
 	{
 	private:
 		int ID;
-		int TestIDselected;
-		//cli::array<String^>^ ThemesWellDone;
 		List<int>ThemesWellDone;
-		String^ RightAns;
+		List<Themes^>THEMES;
+		List<OAIP_Project::Testing^>TESTS;
+
 	private: Bunifu::Framework::UI::BunifuImageButton^ imageButton_exit;
 	private: Bunifu::Framework::UI::BunifuDropdown^ bunifuDropdownTHEMES;
 	private: Bunifu::Framework::UI::BunifuDropdown^ bunifuDropdownDIFFICULTY;
 	private: Bunifu::Framework::UI::BunifuImageButton^ imageButtonTEST;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ labelIStestPASSED;
+	private: System::Windows::Forms::Panel^ panelTest;
 
-
-
-
-	public: 
-			List<Themes^>THEMES;
-	private: System::Windows::Forms::Panel^ panel2;
 	private: XanderUI::XUIRadio^ xuiRadioQ_3;
 	private: XanderUI::XUIRadio^ xuiRadioQ_2;
 	private: XanderUI::XUIRadio^ xuiRadioQ_1;
 	private: Bunifu::Framework::UI::BunifuImageButton^ bunifuImageButtonQUESTION;
 	private: System::Windows::Forms::RichTextBox^ richTextBoxTEST_TEXT;
-	public:
-		List<Testing^>TESTS;
-
+		
 	public:
 		MAINform(int id, List<int>^LOLIK)
 		{
@@ -73,24 +66,14 @@ namespace OAIPProject {
 				delete components;
 			}
 		}
+
 	private: System::Windows::Forms::Panel^ panel1;
-
-
-
 	private: System::Windows::Forms::CheckedListBox^ checkedListBoxTHEMES;
 	private: System::Windows::Forms::Panel^ panelHEADER;
-
-
 	private: System::Windows::Forms::Label^ labelID;
 	private: System::Windows::Forms::Label^ labelThemesCount;
 	private: System::Windows::Forms::Panel^ panelMAIN;
-
-
 	private: System::Windows::Forms::RichTextBox^ richTextBoxTHEME_TEXT;
-
-
-
-
 	private:
 		/// <summary>
 		/// Обязательная переменная конструктора.
@@ -118,7 +101,7 @@ namespace OAIPProject {
 			this->imageButtonTEST = (gcnew Bunifu::Framework::UI::BunifuImageButton());
 			this->richTextBoxTHEME_TEXT = (gcnew System::Windows::Forms::RichTextBox());
 			this->imageButton_exit = (gcnew Bunifu::Framework::UI::BunifuImageButton());
-			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->panelTest = (gcnew System::Windows::Forms::Panel());
 			this->xuiRadioQ_3 = (gcnew XanderUI::XUIRadio());
 			this->xuiRadioQ_2 = (gcnew XanderUI::XUIRadio());
 			this->xuiRadioQ_1 = (gcnew XanderUI::XUIRadio());
@@ -129,7 +112,7 @@ namespace OAIPProject {
 			this->panelMAIN->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->imageButtonTEST))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->imageButton_exit))->BeginInit();
-			this->panel2->SuspendLayout();
+			this->panelTest->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bunifuImageButtonQUESTION))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -300,25 +283,25 @@ namespace OAIPProject {
 			this->imageButton_exit->Zoom = 10;
 			this->imageButton_exit->Click += gcnew System::EventHandler(this, &MAINform::imageButton_exit_Click);
 			// 
-			// panel2
+			// panelTest
 			// 
-			this->panel2->Controls->Add(this->xuiRadioQ_3);
-			this->panel2->Controls->Add(this->xuiRadioQ_2);
-			this->panel2->Controls->Add(this->xuiRadioQ_1);
-			this->panel2->Controls->Add(this->bunifuImageButtonQUESTION);
-			this->panel2->Controls->Add(this->richTextBoxTEST_TEXT);
-			this->panel2->Location = System::Drawing::Point(5, 419);
-			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(666, 234);
-			this->panel2->TabIndex = 23;
+			this->panelTest->Controls->Add(this->xuiRadioQ_3);
+			this->panelTest->Controls->Add(this->xuiRadioQ_2);
+			this->panelTest->Controls->Add(this->xuiRadioQ_1);
+			this->panelTest->Controls->Add(this->bunifuImageButtonQUESTION);
+			this->panelTest->Controls->Add(this->richTextBoxTEST_TEXT);
+			this->panelTest->Location = System::Drawing::Point(5, 419);
+			this->panelTest->Name = L"panelTest";
+			this->panelTest->Size = System::Drawing::Size(666, 234);
+			this->panelTest->TabIndex = 23;
 			// 
 			// xuiRadioQ_3
 			// 
 			this->xuiRadioQ_3->Checked = false;
-			this->xuiRadioQ_3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->xuiRadioQ_3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->xuiRadioQ_3->ForeColor = System::Drawing::Color::Turquoise;
-			this->xuiRadioQ_3->Location = System::Drawing::Point(75, 136);
+			this->xuiRadioQ_3->Location = System::Drawing::Point(75, 143);
 			this->xuiRadioQ_3->Name = L"xuiRadioQ_3";
 			this->xuiRadioQ_3->RadioColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
 				static_cast<System::Int32>(static_cast<System::Byte>(250)));
@@ -333,10 +316,10 @@ namespace OAIPProject {
 			// xuiRadioQ_2
 			// 
 			this->xuiRadioQ_2->Checked = false;
-			this->xuiRadioQ_2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->xuiRadioQ_2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->xuiRadioQ_2->ForeColor = System::Drawing::Color::Turquoise;
-			this->xuiRadioQ_2->Location = System::Drawing::Point(75, 108);
+			this->xuiRadioQ_2->Location = System::Drawing::Point(75, 113);
 			this->xuiRadioQ_2->Name = L"xuiRadioQ_2";
 			this->xuiRadioQ_2->RadioColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
 				static_cast<System::Int32>(static_cast<System::Byte>(250)));
@@ -351,10 +334,10 @@ namespace OAIPProject {
 			// xuiRadioQ_1
 			// 
 			this->xuiRadioQ_1->Checked = false;
-			this->xuiRadioQ_1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->xuiRadioQ_1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->xuiRadioQ_1->ForeColor = System::Drawing::Color::Turquoise;
-			this->xuiRadioQ_1->Location = System::Drawing::Point(75, 80);
+			this->xuiRadioQ_1->Location = System::Drawing::Point(75, 82);
 			this->xuiRadioQ_1->Name = L"xuiRadioQ_1";
 			this->xuiRadioQ_1->RadioColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
 				static_cast<System::Int32>(static_cast<System::Byte>(250)));
@@ -383,8 +366,14 @@ namespace OAIPProject {
 			// 
 			// richTextBoxTEST_TEXT
 			// 
+			this->richTextBoxTEST_TEXT->BackColor = System::Drawing::Color::Black;
+			this->richTextBoxTEST_TEXT->DetectUrls = false;
+			this->richTextBoxTEST_TEXT->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->richTextBoxTEST_TEXT->ForeColor = System::Drawing::Color::DeepSkyBlue;
 			this->richTextBoxTEST_TEXT->Location = System::Drawing::Point(67, 4);
 			this->richTextBoxTEST_TEXT->Name = L"richTextBoxTEST_TEXT";
+			this->richTextBoxTEST_TEXT->ReadOnly = true;
 			this->richTextBoxTEST_TEXT->Size = System::Drawing::Size(539, 70);
 			this->richTextBoxTEST_TEXT->TabIndex = 8;
 			this->richTextBoxTEST_TEXT->Text = L"";
@@ -393,9 +382,9 @@ namespace OAIPProject {
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::Black;
-			this->ClientSize = System::Drawing::Size(676, 419);
+			this->ClientSize = System::Drawing::Size(676, 418);
 			this->ControlBox = false;
-			this->Controls->Add(this->panel2);
+			this->Controls->Add(this->panelTest);
 			this->Controls->Add(this->imageButton_exit);
 			this->Controls->Add(this->panelMAIN);
 			this->Controls->Add(this->panelHEADER);
@@ -413,7 +402,7 @@ namespace OAIPProject {
 			this->panelMAIN->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->imageButtonTEST))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->imageButton_exit))->EndInit();
-			this->panel2->ResumeLayout(false);
+			this->panelTest->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bunifuImageButtonQUESTION))->EndInit();
 			this->ResumeLayout(false);
 
@@ -564,7 +553,7 @@ private: System::Void imageButtonTEST_Click(System::Object^ sender, System::Even
 	panelMAIN->Enabled = false;
 	bunifuDropdownTHEMES->Enabled = false;
 	this->ClientSize = System::Drawing::Size(678, 656);
-	FillTestJopa(TESTS[bunifuDropdownTHEMES->selectedIndex]);
+	FillTesting(TESTS[bunifuDropdownTHEMES->selectedIndex]);
 }
 
 private: void FillTest()
@@ -574,18 +563,11 @@ private: void FillTest()
 	{
 		con->Open();
 		SQLiteCommand^ cmd = con->CreateCommand();
-		cmd->CommandText = "SELECT * FROM TESTs";
+		cmd->CommandText = "SELECT ID FROM Themes";
 		SQLiteDataReader^ reader = cmd->ExecuteReader();
 		while (reader->Read())
 		{
-			Testing^ OBJ = gcnew Testing();
-			OBJ->SetID(reader->GetInt32(0));
-			OBJ->SetThemeID(reader->GetInt32(1));
-			OBJ->SetQuestion_1(reader->GetString(2));
-			OBJ->SetQuestion_2(reader->GetString(3));
-			OBJ->SetQuestion_3(reader->GetString(4));
-			OBJ->SetRightAnswer(reader->GetString(5));
-			OBJ->SetQUEST(reader->GetString(6));
+			OAIP_Project::Testing^ OBJ = gcnew OAIP_Project::Testing(reader->GetInt32(0));
 			TESTS.Add(OBJ);
 		}
 		con->Close();
@@ -600,59 +582,104 @@ private: void FillTest()
 	}
 }
 
-public: void FillTestJopa(Testing^ OBJ)
+private: OAIP_Project::Testing^ TestingRightNow;
+private: int IndexOfQuest = 0;
+public: void FillTesting(OAIP_Project::Testing^ OBJ)
 {
-	richTextBoxTEST_TEXT->Text = OBJ->GetQUEST();
-	xuiRadioQ_1->Text = OBJ->GetQuestion_1();
-	xuiRadioQ_2->Text = OBJ->GetQuestion_2();
-	xuiRadioQ_3->Text = OBJ->GetQuestion_3();
-	RightAns = OBJ->GetRightAnswer();
-	TestIDselected = OBJ->GetID();
+	richTextBoxTEST_TEXT->Text = OBJ->GetQuestByNumber(IndexOfQuest)->GetQuest();
+	xuiRadioQ_1->Text = OBJ->GetQuestByNumber(IndexOfQuest)->GetFirstQuestionText();
+	xuiRadioQ_2->Text = OBJ->GetQuestByNumber(IndexOfQuest)->GetSecondQuestionText();
+	xuiRadioQ_3->Text = OBJ->GetQuestByNumber(IndexOfQuest)->GetThirdQuestionText();
+	TestingRightNow = OBJ;
+	panelTest->Refresh();
 }
 
 private: System::Void bunifuImageButtonQUESTION_Click(System::Object^ sender, System::EventArgs^ e) 
 {
 	if (xuiRadioQ_1->Checked)
 	{
-		if (xuiRadioQ_1->Text == RightAns)
+		if (xuiRadioQ_1->Text == TestingRightNow->GetQuestByNumber(IndexOfQuest)->GetRightAnswerText())
 		{
 			MessageBox::Show("Ответ верный!");
-			fillDataBaseWithTheCorrectAns();
+			IndexOfQuest++;
+			if (IndexOfQuest == 3)
+			{
+				MessageBox::Show("Тест успешно пройден!");
+				IndexOfQuest = 0;
+				SetFormNormalSize();
+				fillDataBaseWithTheCorrectAns();
+			}
+			else
+			{
+				FillTesting(TestingRightNow);
+			}
 		}
 		else
 		{
-			MessageBox::Show("Ответ неверный!");
+			MessageBox::Show("Ответ неверный! Но ничего страшного, в следующий раз пройдешь)");
+			IndexOfQuest = 0;
+			SetFormNormalSize();
 		}
 	}
 	else if (xuiRadioQ_2->Checked)
 	{
-		if (xuiRadioQ_2->Text == RightAns)
+		if (xuiRadioQ_2->Text == TestingRightNow->GetQuestByNumber(IndexOfQuest)->GetRightAnswerText())
 		{
 			MessageBox::Show("Ответ верный!");
-			fillDataBaseWithTheCorrectAns();
-
+			IndexOfQuest++;
+			if (IndexOfQuest == 3)
+			{
+				MessageBox::Show("Тест успешно пройден!");
+				IndexOfQuest = 0;
+				SetFormNormalSize();
+				fillDataBaseWithTheCorrectAns();
+			}
+			else
+			{
+				FillTesting(TestingRightNow);
+			}
 		}
 		else
 		{
-			MessageBox::Show("Ответ неверный!");
+			MessageBox::Show("Ответ неверный! Но ничего страшного, в следующий раз пройдешь)");
+			IndexOfQuest = 0;
+			SetFormNormalSize();
 		}
 	}
 	else if (xuiRadioQ_3->Checked)
 	{
-		if (xuiRadioQ_3->Text == RightAns)
+		if (xuiRadioQ_3->Text == TestingRightNow->GetQuestByNumber(IndexOfQuest)->GetRightAnswerText())
 		{
 			MessageBox::Show("Ответ верный!");
-			fillDataBaseWithTheCorrectAns();
+			IndexOfQuest++;
+			if (IndexOfQuest == 3)
+			{
+				MessageBox::Show("Тест успешно пройден!");
+				IndexOfQuest = 0;
+				SetFormNormalSize();
+				fillDataBaseWithTheCorrectAns();
+			}
+			else
+			{
+				FillTesting(TestingRightNow);
+			}
 		}
 		else
 		{
-			MessageBox::Show("Ответ неверный!");
+			MessageBox::Show("Ответ неверный! Но ничего страшного, в следующий раз пройдешь)");
+			IndexOfQuest = 0;
+			SetFormNormalSize();
 		}
-	}
-	this->ClientSize = System::Drawing::Size(678, 419);
-	panelMAIN->Enabled = true;
-	bunifuDropdownTHEMES->Enabled = true;
+	}	
 }
+
+private:
+	void SetFormNormalSize()
+	{
+		this->ClientSize = System::Drawing::Size(678, 419);
+		panelMAIN->Enabled = true;
+		bunifuDropdownTHEMES->Enabled = true;
+	}
 
 private: System::Void xuiRadioQ_Click(System::Object^ sender, System::EventArgs^ e) 
 {
@@ -670,7 +697,7 @@ private: void fillDataBaseWithTheCorrectAns()
 		cmd->CommandText = "SELECT PassedThemes FROM Users WHERE ID=" + ID;
 		strRIGHTANSers = cmd->ExecuteScalar()->ToString();
 		delete cmd;
-		strRIGHTANSers += "," + TestIDselected;
+		strRIGHTANSers += "," + TestingRightNow->GetThemeID();
 		SQLiteCommand^ cmd2 = con->CreateCommand();
 		cmd2->CommandText = "UPDATE Users SET PassedThemes=" + "'" + strRIGHTANSers + "' WHERE ID=" + ID + ";";
 		cmd2->ExecuteNonQuery();

@@ -150,6 +150,7 @@
     <ClCompile Include="ForgotPassword.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="MAINform.cpp" />
+    <ClCompile Include="Quest.cpp" />
     <ClCompile Include="RegistrationForm.cpp" />
     <ClCompile Include="Themes.cpp" />
   </ItemGroup>
@@ -166,6 +167,7 @@
     <ClInclude Include="MAINform.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Quest.h" />
     <ClInclude Include="RegistrationForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
