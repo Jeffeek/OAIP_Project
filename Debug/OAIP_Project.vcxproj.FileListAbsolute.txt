@@ -6,7 +6,6 @@ E:\projectsVS\OAIP_Project\Debug\OAIP_Project.pdb
 E:\projectsVS\OAIP_Project\Debug\Guna.UI.dll
 E:\projectsVS\OAIP_Project\Debug\SQLite.Designer.dll
 E:\projectsVS\OAIP_Project\Debug\System.Data.SQLite.dll
-E:\projectsVS\OAIP_Project\Debug\System.Data.SQLite.EF6.dll
 E:\projectsVS\OAIP_Project\Debug\System.Data.SQLite.Linq.dll
 E:\projectsVS\OAIP_Project\Debug\Microsoft.VisualStudio.Shell.Interop.dll
 E:\projectsVS\OAIP_Project\Debug\Microsoft.VisualStudio.OLE.Interop.dll
@@ -19,3 +18,4 @@ E:\projectsVS\OAIP_Project\Debug\OAIPProject.RegistrationForm.resources
 E:\projectsVS\OAIP_Project\Debug\OAIP_Project.vcxprojAssemblyReference.cache
 E:\projectsVS\OAIP_Project\Debug\OAIPProject.ForgotPassword.resources
 E:\projectsVS\OAIP_Project\Debug\OAIPProject.AdminMain.resources
+E:\projectsVS\OAIP_Project\Debug\Bunifu_UI_v1.52.dll

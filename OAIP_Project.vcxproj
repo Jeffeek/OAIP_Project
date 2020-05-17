@@ -115,10 +115,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>C:\Users\Михаил\Desktop\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>..\TRPO_Project\Guna.UI.dll</HintPath>
+      <HintPath>Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="SQLite.Designer">
@@ -130,9 +130,6 @@
     <Reference Include="System.Data.SQLite">
       <HintPath>SQLite\System.Data.SQLite.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data.SQLite.EF6">
-      <HintPath>SQLite\System.Data.SQLite.EF6.dll</HintPath>
-    </Reference>
     <Reference Include="System.Data.SQLite.Linq">
       <HintPath>SQLite\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
@@ -142,7 +139,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="XanderUI">
-      <HintPath>..\TRPO_Project\XanderUI.dll</HintPath>
+      <HintPath>XanderUI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -193,14 +190,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="OAiP.db">
-      <DeploymentContent>true</DeploymentContent>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Image1.bmp" />
     <Image Include="Images\eye_hide.png" />
     <Image Include="Images\eye_show.png" />
+    <Image Include="Images\ok.png" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="OAIP_Project.rc" />

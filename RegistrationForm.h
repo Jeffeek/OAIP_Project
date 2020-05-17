@@ -3,13 +3,22 @@
 namespace OAIPProject {
 
 	using namespace System;
+	using namespace System::Windows::Forms;
+	using namespace Windows::Forms::Design;
 	using namespace System::ComponentModel;
+	using namespace System::Collections::Generic;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::Data::SQLite;
+	using namespace System::Text;
+	using namespace System::Linq;
 	using namespace System::IO;
+	using namespace cli;
+	using namespace std;
+	using namespace Bunifu::Framework::UI;
+	using namespace Guna::UI::WinForms;
 
 	/// <summary>
 	/// Ñâîäêà äëÿ RegistrationForm
@@ -120,7 +129,7 @@ namespace OAIPProject {
 			this->textBox_pass->ForeColor = System::Drawing::Color::Fuchsia;
 			this->textBox_pass->HintForeColor = System::Drawing::Color::Crimson;
 			this->textBox_pass->HintText = L"";
-			this->textBox_pass->isPassword = false;
+			this->textBox_pass->isPassword = true;
 			this->textBox_pass->LineFocusedColor = System::Drawing::Color::BlueViolet;
 			this->textBox_pass->LineIdleColor = System::Drawing::Color::DeepSkyBlue;
 			this->textBox_pass->LineMouseHoverColor = System::Drawing::Color::Turquoise;
@@ -130,6 +139,7 @@ namespace OAIPProject {
 			this->textBox_pass->Name = L"textBox_pass";
 			this->textBox_pass->Size = System::Drawing::Size(304, 25);
 			this->textBox_pass->TabIndex = 2;
+			this->textBox_pass->Text = L"Q";
 			this->textBox_pass->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
 			// 
 			// textBox_repPass
@@ -140,7 +150,7 @@ namespace OAIPProject {
 			this->textBox_repPass->ForeColor = System::Drawing::Color::Fuchsia;
 			this->textBox_repPass->HintForeColor = System::Drawing::Color::Crimson;
 			this->textBox_repPass->HintText = L"";
-			this->textBox_repPass->isPassword = false;
+			this->textBox_repPass->isPassword = true;
 			this->textBox_repPass->LineFocusedColor = System::Drawing::Color::BlueViolet;
 			this->textBox_repPass->LineIdleColor = System::Drawing::Color::DeepSkyBlue;
 			this->textBox_repPass->LineMouseHoverColor = System::Drawing::Color::Turquoise;
@@ -150,6 +160,7 @@ namespace OAIPProject {
 			this->textBox_repPass->Name = L"textBox_repPass";
 			this->textBox_repPass->Size = System::Drawing::Size(304, 25);
 			this->textBox_repPass->TabIndex = 3;
+			this->textBox_repPass->Text = L"Q";
 			this->textBox_repPass->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
 			// 
 			// button_applyUser
@@ -251,7 +262,6 @@ namespace OAIPProject {
 			this->Name = L"RegistrationForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"RegistrationForm";
-			this->Load += gcnew System::EventHandler(this, &RegistrationForm::RegistrationForm_Load);
 			this->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &RegistrationForm::RegistrationForm_MouseDown);
 			this->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &RegistrationForm::RegistrationForm_MouseMove);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->button_applyUser))->EndInit();
@@ -267,6 +277,7 @@ namespace OAIPProject {
 		if (textBox_pass->Text != textBox_repPass->Text)
 		{
 			MessageBox::Show("Íå ñîîòâåòâñòâèå ïîëåé ÏÀÐÎËß è ÏÎÂÒÎÐÀ ÏÀÐÎËß");
+			return;
 		}
 		if (textBox_pass->Text->Length > 5 && textBox_RegLogin->Text->Length > 4 && textBox_pass->Text == textBox_repPass->Text) {
 			SQLiteConnection^ con = gcnew SQLiteConnection("Data Source=DataBases\\OAiP.db");
@@ -307,6 +318,7 @@ namespace OAIPProject {
 			}
 		}
 	}
+
 private: System::Void imageButton_exit_Click(System::Object^ sender, System::EventArgs^ e) 
 {
 	this->Close();
@@ -314,7 +326,7 @@ private: System::Void imageButton_exit_Click(System::Object^ sender, System::Eve
 private: System::Void button_PassVisibility_Click(System::Object^ sender, System::EventArgs^ e) 
 {
 	System::ComponentModel::ComponentResourceManager^ resources2 = (gcnew System::ComponentModel::ComponentResourceManager(RegistrationForm::typeid));
-	if (textBox_pass->isPassword)
+	if (textBox_pass->isPassword && textBox_pass->isOnFocused)
 	{
 		FileStream^ stream = gcnew FileStream(Directory::GetCurrentDirectory() + "\\Images\\eye_show.png", FileMode::Open);
 		button_PassVisibility->Image = Image::FromStream(stream);
@@ -322,7 +334,7 @@ private: System::Void button_PassVisibility_Click(System::Object^ sender, System
 		delete stream;
 		textBox_pass->isPassword = false;
 	}
-	else
+	else if (!textBox_pass->isPassword && textBox_pass->isOnFocused)
 	{
 		FileStream^ stream = gcnew FileStream(Directory::GetCurrentDirectory() + "\\Images\\eye_hide.png", FileMode::Open);
 		button_PassVisibility->Image = Image::FromStream(stream);
@@ -345,10 +357,6 @@ private: System::Void RegistrationForm_MouseMove(System::Object^ sender, System:
 private: System::Void RegistrationForm_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) 
 {
 	lastPoint = e->Location;
-}
-private: System::Void RegistrationForm_Load(System::Object^ sender, System::EventArgs^ e) 
-{
-	textBox_repPass->isPassword = true;
 }
 };
 }

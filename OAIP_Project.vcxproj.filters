@@ -67,16 +67,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="OAiP.db" />
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="Images\eye_show.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
     <Image Include="Images\eye_hide.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
-    <Image Include="Image1.bmp">
+    <Image Include="Images\ok.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
   </ItemGroup>

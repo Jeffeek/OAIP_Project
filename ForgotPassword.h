@@ -1,5 +1,5 @@
 #pragma once
-#include <string>
+
 namespace OAIPProject {
 
 	using namespace System;
@@ -167,6 +167,11 @@ namespace OAIPProject {
 			con->Open();
 			SQLiteCommand^ cmd = con->CreateCommand();
 			cmd->CommandText = "SELECT Password FROM Users WHERE Login='" + textBox_login->Text + "';";
+			if (textBox_login->Text == "ADMIN")
+			{
+				MessageBox::Show("Пользователь с Логином " + textBox_login->Text + " не может быть восстановлен :)");
+				return;
+			}
 			if (cmd->ExecuteScalar() == nullptr)
 			{
 				MessageBox::Show("Пользователь с Логином " + textBox_login->Text + " не найден :(");
@@ -185,7 +190,7 @@ namespace OAIPProject {
 		finally
 		{
 			con->Close();
-			delete (IDisposable^)con;
+			delete static_cast<IDisposable^>(con);
 		}
 	}
 private: System::Void imageButton_exit_Click(System::Object^ sender, System::EventArgs^ e) 

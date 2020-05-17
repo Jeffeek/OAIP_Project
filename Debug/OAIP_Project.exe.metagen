@@ -22,8 +22,6 @@ Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561
 	hash=None, flags=None
 Assembly System.Data.SQLite, Version=1.0.105.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139: 
 	hash=None, flags=None
-Assembly System.Data.SQLite.EF6, Version=1.0.105.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139: 
-	hash=None, flags=None
 Assembly System.Data.SQLite.Linq, Version=1.0.105.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139: 
 	hash=None, flags=None
 Assembly System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
@@ -58,7 +56,7 @@ Class OAIPProject.Themes: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     GetDifficultyInt(): PrivateScope, Public, HideBySig
     SetDifficulty(String): PrivateScope, Public, HideBySig
     GetDifficultyString(): PrivateScope, Public, HideBySig
-Class OAIP_Project.Quest: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class OAIPProject.Quest: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     GetQuestID(): PrivateScope, Public, HideBySig
@@ -75,7 +73,7 @@ Class OAIP_Project.Quest: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     SetThirdQuestionText(String): PrivateScope, Public, HideBySig
     GetRightAnswerText(): PrivateScope, Public, HideBySig
     SetRightAnswerText(String): PrivateScope, Public, HideBySig
-Class OAIP_Project.Testing: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class OAIPProject.Testing: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     GetThemeID(): PrivateScope, Public, HideBySig

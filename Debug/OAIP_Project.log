@@ -1,4 +1,5 @@
 ﻿E:\VS\MSBuild\Microsoft\VC\v160\Microsoft.MetaGen.targets(91,5): warning : Отсутствует обязательный файл "C:\USERS\михаил\DESKTOP\BUNIFU_UI_V1.52.DLL".
+  ForgotPassword.cpp
   LoginForm.cpp
   MAINform.cpp
   Создание кода...

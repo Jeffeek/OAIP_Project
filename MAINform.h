@@ -11,8 +11,6 @@ namespace OAIPProject {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-	using namespace System::Data::Sql;
-	using namespace System::Data::OleDb;
 	using namespace System::Data::SQLite;
 	using namespace System::Text;
 	using namespace System::Linq;
@@ -27,8 +25,8 @@ namespace OAIPProject {
 	private:
 		int ID;
 		List<int>ThemesWellDone;
-		List<Themes^>THEMES;
-		List<OAIP_Project::Testing^>TESTS;
+		List<OAIPProject::Themes^>THEMES;
+		List<OAIPProject::Testing^>TESTS;
 
 	private: Bunifu::Framework::UI::BunifuImageButton^ imageButton_exit;
 	private: Bunifu::Framework::UI::BunifuDropdown^ bunifuDropdownTHEMES;
@@ -45,13 +43,13 @@ namespace OAIPProject {
 	private: System::Windows::Forms::RichTextBox^ richTextBoxTEST_TEXT;
 		
 	public:
-		MAINform(int id, List<int>^LOLIK)
+		MAINform(int id, List<int>^SucceedThemes)
 		{
 			InitializeComponent();
 			ID = id;
-			for (int i = 0; i < LOLIK->Count; i++)
+			for (int i = 0; i < SucceedThemes->Count; i++)
 			{
-				ThemesWellDone.Add(LOLIK[i]);
+				ThemesWellDone.Add(SucceedThemes[i]);
 			}
 		}
 
@@ -301,14 +299,14 @@ namespace OAIPProject {
 			this->xuiRadioQ_3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->xuiRadioQ_3->ForeColor = System::Drawing::Color::Turquoise;
-			this->xuiRadioQ_3->Location = System::Drawing::Point(75, 143);
+			this->xuiRadioQ_3->Location = System::Drawing::Point(75, 133);
 			this->xuiRadioQ_3->Name = L"xuiRadioQ_3";
 			this->xuiRadioQ_3->RadioColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
 				static_cast<System::Int32>(static_cast<System::Byte>(250)));
 			this->xuiRadioQ_3->RadioHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(98)));
-			this->xuiRadioQ_3->RadioStyle = XanderUI::XUIRadio::Style::Material;
-			this->xuiRadioQ_3->Size = System::Drawing::Size(531, 16);
+			this->xuiRadioQ_3->RadioStyle = XanderUI::XUIRadio::Style::Android;
+			this->xuiRadioQ_3->Size = System::Drawing::Size(531, 25);
 			this->xuiRadioQ_3->TabIndex = 12;
 			this->xuiRadioQ_3->Text = L"xuiRadio3";
 			this->xuiRadioQ_3->Click += gcnew System::EventHandler(this, &MAINform::xuiRadioQ_Click);
@@ -319,14 +317,14 @@ namespace OAIPProject {
 			this->xuiRadioQ_2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->xuiRadioQ_2->ForeColor = System::Drawing::Color::Turquoise;
-			this->xuiRadioQ_2->Location = System::Drawing::Point(75, 113);
+			this->xuiRadioQ_2->Location = System::Drawing::Point(75, 105);
 			this->xuiRadioQ_2->Name = L"xuiRadioQ_2";
 			this->xuiRadioQ_2->RadioColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
 				static_cast<System::Int32>(static_cast<System::Byte>(250)));
 			this->xuiRadioQ_2->RadioHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(98)));
-			this->xuiRadioQ_2->RadioStyle = XanderUI::XUIRadio::Style::Material;
-			this->xuiRadioQ_2->Size = System::Drawing::Size(531, 16);
+			this->xuiRadioQ_2->RadioStyle = XanderUI::XUIRadio::Style::Android;
+			this->xuiRadioQ_2->Size = System::Drawing::Size(531, 25);
 			this->xuiRadioQ_2->TabIndex = 11;
 			this->xuiRadioQ_2->Text = L"xuiRadio2";
 			this->xuiRadioQ_2->Click += gcnew System::EventHandler(this, &MAINform::xuiRadioQ_Click);
@@ -337,14 +335,14 @@ namespace OAIPProject {
 			this->xuiRadioQ_1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->xuiRadioQ_1->ForeColor = System::Drawing::Color::Turquoise;
-			this->xuiRadioQ_1->Location = System::Drawing::Point(75, 82);
+			this->xuiRadioQ_1->Location = System::Drawing::Point(75, 77);
 			this->xuiRadioQ_1->Name = L"xuiRadioQ_1";
 			this->xuiRadioQ_1->RadioColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
 				static_cast<System::Int32>(static_cast<System::Byte>(250)));
 			this->xuiRadioQ_1->RadioHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(98)));
-			this->xuiRadioQ_1->RadioStyle = XanderUI::XUIRadio::Style::Material;
-			this->xuiRadioQ_1->Size = System::Drawing::Size(531, 16);
+			this->xuiRadioQ_1->RadioStyle = XanderUI::XUIRadio::Style::Android;
+			this->xuiRadioQ_1->Size = System::Drawing::Size(531, 25);
 			this->xuiRadioQ_1->TabIndex = 10;
 			this->xuiRadioQ_1->Text = L"xuiRadio1";
 			this->xuiRadioQ_1->Click += gcnew System::EventHandler(this, &MAINform::xuiRadioQ_Click);
@@ -380,9 +378,11 @@ namespace OAIPProject {
 			// 
 			// MAINform
 			// 
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->AutoScaleDimensions = System::Drawing::SizeF(96, 96);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
+			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->BackColor = System::Drawing::Color::Black;
-			this->ClientSize = System::Drawing::Size(676, 418);
+			this->ClientSize = System::Drawing::Size(676, 417);
 			this->ControlBox = false;
 			this->Controls->Add(this->panelTest);
 			this->Controls->Add(this->imageButton_exit);
@@ -457,7 +457,7 @@ private:
 				int i = 0;
 				while (reader->Read())
 				{
-					Themes^ OBJ = gcnew Themes();
+					OAIPProject::Themes^ OBJ = gcnew OAIPProject::Themes();
 					OBJ->SetID(reader->GetInt32(0));
 					OBJ->SetName(reader->GetString(1));
 					OBJ->SetFilePath(reader->GetString(2));
@@ -475,6 +475,7 @@ private:
 				delete con;
 			}
 		}
+
 
 private: System::Void MAINform_Load(System::Object^ sender, System::EventArgs^ e) 
 	{
@@ -567,7 +568,7 @@ private: void FillTest()
 		SQLiteDataReader^ reader = cmd->ExecuteReader();
 		while (reader->Read())
 		{
-			OAIP_Project::Testing^ OBJ = gcnew OAIP_Project::Testing(reader->GetInt32(0));
+			OAIPProject::Testing^ OBJ = gcnew OAIPProject::Testing(reader->GetInt32(0));
 			TESTS.Add(OBJ);
 		}
 		con->Close();
@@ -582,9 +583,9 @@ private: void FillTest()
 	}
 }
 
-private: OAIP_Project::Testing^ TestingRightNow;
+private: OAIPProject::Testing^ TestingRightNow;
 private: int IndexOfQuest = 0;
-public: void FillTesting(OAIP_Project::Testing^ OBJ)
+public: void FillTesting(OAIPProject::Testing^ OBJ)
 {
 	richTextBoxTEST_TEXT->Text = OBJ->GetQuestByNumber(IndexOfQuest)->GetQuest();
 	xuiRadioQ_1->Text = OBJ->GetQuestByNumber(IndexOfQuest)->GetFirstQuestionText();
@@ -594,83 +595,31 @@ public: void FillTesting(OAIP_Project::Testing^ OBJ)
 	panelTest->Refresh();
 }
 
+private: XanderUI::XUIRadio^ SelectedXUIRadio;
 private: System::Void bunifuImageButtonQUESTION_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	if (xuiRadioQ_1->Checked)
+	if (SelectedXUIRadio->Text == TestingRightNow->GetQuestByNumber(IndexOfQuest)->GetRightAnswerText())
 	{
-		if (xuiRadioQ_1->Text == TestingRightNow->GetQuestByNumber(IndexOfQuest)->GetRightAnswerText())
+		MessageBox::Show("Ответ верный!");
+		IndexOfQuest++;
+		if (IndexOfQuest == 3)
 		{
-			MessageBox::Show("Ответ верный!");
-			IndexOfQuest++;
-			if (IndexOfQuest == 3)
-			{
-				MessageBox::Show("Тест успешно пройден!");
-				IndexOfQuest = 0;
-				SetFormNormalSize();
-				fillDataBaseWithTheCorrectAns();
-			}
-			else
-			{
-				FillTesting(TestingRightNow);
-			}
+			MessageBox::Show("Тест успешно пройден!");
+			IndexOfQuest = 0;
+			SetFormNormalSize();
+			FillDataBaseWithTheCorrectAns();
 		}
 		else
 		{
-			MessageBox::Show("Ответ неверный! Но ничего страшного, в следующий раз пройдешь)");
-			IndexOfQuest = 0;
-			SetFormNormalSize();
+			FillTesting(TestingRightNow);
 		}
 	}
-	else if (xuiRadioQ_2->Checked)
+	else
 	{
-		if (xuiRadioQ_2->Text == TestingRightNow->GetQuestByNumber(IndexOfQuest)->GetRightAnswerText())
-		{
-			MessageBox::Show("Ответ верный!");
-			IndexOfQuest++;
-			if (IndexOfQuest == 3)
-			{
-				MessageBox::Show("Тест успешно пройден!");
-				IndexOfQuest = 0;
-				SetFormNormalSize();
-				fillDataBaseWithTheCorrectAns();
-			}
-			else
-			{
-				FillTesting(TestingRightNow);
-			}
-		}
-		else
-		{
-			MessageBox::Show("Ответ неверный! Но ничего страшного, в следующий раз пройдешь)");
-			IndexOfQuest = 0;
-			SetFormNormalSize();
-		}
+		MessageBox::Show("Ответ неверный! Но ничего страшного, в следующий раз пройдешь)");
+		IndexOfQuest = 0;
+		SetFormNormalSize();
 	}
-	else if (xuiRadioQ_3->Checked)
-	{
-		if (xuiRadioQ_3->Text == TestingRightNow->GetQuestByNumber(IndexOfQuest)->GetRightAnswerText())
-		{
-			MessageBox::Show("Ответ верный!");
-			IndexOfQuest++;
-			if (IndexOfQuest == 3)
-			{
-				MessageBox::Show("Тест успешно пройден!");
-				IndexOfQuest = 0;
-				SetFormNormalSize();
-				fillDataBaseWithTheCorrectAns();
-			}
-			else
-			{
-				FillTesting(TestingRightNow);
-			}
-		}
-		else
-		{
-			MessageBox::Show("Ответ неверный! Но ничего страшного, в следующий раз пройдешь)");
-			IndexOfQuest = 0;
-			SetFormNormalSize();
-		}
-	}	
 }
 
 private:
@@ -683,10 +632,11 @@ private:
 
 private: System::Void xuiRadioQ_Click(System::Object^ sender, System::EventArgs^ e) 
 {
+	SelectedXUIRadio = static_cast<XanderUI::XUIRadio^>(sender);
 	bunifuImageButtonQUESTION->Enabled = true;
 }
 
-private: void fillDataBaseWithTheCorrectAns()
+private: void FillDataBaseWithTheCorrectAns()
 {
 	SQLiteConnection^ con = gcnew SQLiteConnection("Data Source=DataBases\\OAiP.db");
 	try
@@ -711,7 +661,6 @@ private: void fillDataBaseWithTheCorrectAns()
 		}
 		delete cmd2;
 		con->Close();
-		//this->ClientSize = System::Drawing::Size(678, 419);
 		MAINform_Load(gcnew Object, gcnew EventArgs);
 	}
 	catch (Exception^ e)
@@ -720,7 +669,7 @@ private: void fillDataBaseWithTheCorrectAns()
 	}
 	finally
 	{
-		delete con;
+		delete static_cast<IDisposable^>(con);
 	}
 }		
 private:

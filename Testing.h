@@ -8,7 +8,7 @@
 #include "Themes.h"
 #include "Quest.h"
 
-namespace OAIP_Project 
+namespace OAIPProject 
 {
 	using namespace std;
 	using namespace System;
@@ -19,8 +19,6 @@ namespace OAIP_Project
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-	using namespace System::Data::Sql;
-	using namespace System::Data::OleDb;
 	using namespace System::Data::SQLite;
 	using namespace System::Text;
 	using namespace cli;
@@ -60,7 +58,6 @@ namespace OAIP_Project
 						quest->SetThirdQuestionText(reader->GetString(4));
 						quest->SetRightAnswerText(reader->GetString(5));
 						quest->SetQuest(reader->GetString(6));
-
 						QuestList.Add(quest);
 					}
 					reader->Close();
@@ -70,7 +67,6 @@ namespace OAIP_Project
 				{
 					MessageBox::Show("Error Executing SQL: " + e->ToString(), "Exception While Displaying MyTable ...");
 				}
-
 				db->Close();
 			}
 			finally

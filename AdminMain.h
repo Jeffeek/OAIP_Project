@@ -9,6 +9,10 @@ namespace OAIPProject {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::Data::SQLite;
+	using namespace Bunifu::Framework::UI;
+	using namespace Guna::UI::Lib;
+	using namespace  XanderUI;
+
 
 	/// <summary>
 	/// Сводка для AdminMain

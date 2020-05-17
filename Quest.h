@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
-#include <vector>
-namespace OAIP_Project 
+namespace OAIPProject 
 {
 	using namespace std;
 	using namespace System;
@@ -12,8 +11,6 @@ namespace OAIP_Project
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-	using namespace System::Data::Sql;
-	using namespace System::Data::OleDb;
 	using namespace System::Data::SQLite;
 	using namespace System::Text;
 	using namespace cli;

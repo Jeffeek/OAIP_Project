@@ -11,6 +11,7 @@
 #include "AdminMain.h"
 #include <string>
 #include <vector>
+#include "AdminMain.h"
 using namespace std;
 
 
@@ -31,7 +32,8 @@ namespace OAIPProject {
 	using namespace System::Text;
 	using namespace System::Linq;
 	using namespace cli;
-
+	using namespace Bunifu::Framework::UI;
+	using namespace Guna::UI::WinForms;
 	/// <summary>
 	/// Сводка для LoginForm
 	/// </summary>
@@ -308,7 +310,7 @@ private: System::Void imageButton_login_Click(System::Object^ sender, System::Ev
 				if (textBoxLOGIN->Text == "ADMIN" && textBoxPASS->Text == "123456")
 				{
 					this->Hide();
-					AdminMain^ FF = gcnew AdminMain();
+					OAIPProject::AdminMain^ FF = gcnew OAIPProject::AdminMain();
 					FF->Show();
 				}
 				else
@@ -320,7 +322,7 @@ private: System::Void imageButton_login_Click(System::Object^ sender, System::Ev
 					{
 						PassedINT->Add(Convert::ToInt32(Passed[i]));
 					}
-					MAINform^ f2 = gcnew MAINform(ID, PassedINT);
+					OAIPProject::MAINform^ f2 = gcnew OAIPProject::MAINform(ID, PassedINT);
 					f2->Show();
 					this->Hide();
 				}
@@ -349,10 +351,9 @@ private: System::Void imageButton_exit_Click(System::Object^ sender, System::Eve
 }
 private: System::Void button_PassVisibility_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(LoginForm::typeid));
 	if (textBoxPASS->isPassword)
 	{
-		FileStream^ stream = gcnew FileStream(Directory::GetCurrentDirectory() + "\\Images\\eye_show.png", FileMode::Open);
+		IO::FileStream^ stream = gcnew IO::FileStream(IO::Directory::GetCurrentDirectory() + "\\Images\\eye_show.png", IO::FileMode::Open);
 		button_PassVisibility->Image = Image::FromStream(stream);
 		stream->Close();
 		delete stream;
@@ -360,7 +361,7 @@ private: System::Void button_PassVisibility_Click(System::Object^ sender, System
 	}
 	else 
 	{
-		FileStream^ stream = gcnew FileStream(Directory::GetCurrentDirectory() + "\\Images\\eye_hide.png", FileMode::Open);
+		IO::FileStream^ stream = gcnew IO::FileStream(IO::Directory::GetCurrentDirectory() + "\\Images\\eye_hide.png", IO::FileMode::Open);
 		button_PassVisibility->Image = Image::FromStream(stream);
 		stream->Close();
 		delete stream;
@@ -369,14 +370,14 @@ private: System::Void button_PassVisibility_Click(System::Object^ sender, System
 }
 private: System::Void link_FP_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) 
 {
-	ForgotPassword^ FPform = gcnew ForgotPassword();
+	OAIPProject::ForgotPassword^ FPform = gcnew OAIPProject::ForgotPassword();
 	this->Hide();
 	FPform->ShowDialog();
 	this->Show();
 }
 private: System::Void link_REGISTRATION_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) 
 {
-	RegistrationForm^ REGform = gcnew RegistrationForm();
+	OAIPProject::RegistrationForm^ REGform = gcnew OAIPProject::RegistrationForm();
 	this->Hide();
 	REGform->ShowDialog();
 	this->Show();
