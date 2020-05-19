@@ -150,8 +150,11 @@ namespace OAIPProject {
 			this->Controls->Add(this->textBox_login);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"ForgotPassword";
+			this->Opacity = 0.8;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"ForgotPassword";
+			this->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &ForgotPassword::ForgotPassword_MouseDown);
+			this->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &ForgotPassword::ForgotPassword_MouseMove);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->button_SearchPASS))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->imageButton_exit))->EndInit();
 			this->ResumeLayout(false);
@@ -159,8 +162,8 @@ namespace OAIPProject {
 
 		}
 #pragma endregion
-	private: System::Void button_SearchPASS_Click(System::Object^ sender, System::EventArgs^ e) 
-	{
+private: System::Void button_SearchPASS_Click(System::Object^ sender, System::EventArgs^ e)
+{
 		SQLiteConnection^ con = gcnew SQLiteConnection("Data Source=DataBases\\OAiP.db");
 		try
 		{
@@ -192,10 +195,23 @@ namespace OAIPProject {
 			con->Close();
 			delete static_cast<IDisposable^>(con);
 		}
-	}
-private: System::Void imageButton_exit_Click(System::Object^ sender, System::EventArgs^ e) 
+}
+private: System::Void imageButton_exit_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	this->Close();
+}
+private: Point^ lastPoint;
+private: System::Void ForgotPassword_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) 
+{
+	if (e->Button == System::Windows::Forms::MouseButtons::Left)
+	{
+		Left += e->X - lastPoint->X;
+		Top += e->Y - lastPoint->Y;
+	}
+}
+private: System::Void ForgotPassword_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) 
+{
+	lastPoint = e->Location;
 }
 };
 }

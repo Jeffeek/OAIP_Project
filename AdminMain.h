@@ -273,10 +273,6 @@ namespace OAIPProject {
 
 		}
 #pragma endregion
-	private: System::Void button_OpenTable_Click(System::Object^ sender, System::EventArgs^ e) 
-	{
-		DataGridTables->ColumnHeadersHeight = 25;
-	}
 private: System::Void button_ChangeTable_Click(System::Object^ sender, System::EventArgs^ e) 
 {
 	dataAdapter->Update(dataSet->Tables[0]);
@@ -350,8 +346,7 @@ private: System::Void comboBox_OpenTable_onItemSelected(System::Object^ sender, 
 	}
 	DataGridTables->ColumnHeadersHeight = 25;
 }
-private:
-	Point^ lastPoint;
+private: Point^ lastPoint;
 private: System::Void AdminMain_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
 {
 	if (e->Button == System::Windows::Forms::MouseButtons::Left)

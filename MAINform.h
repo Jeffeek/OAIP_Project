@@ -409,8 +409,7 @@ namespace OAIPProject {
 		}
 #pragma endregion
 
-private: 
-		Void FillListBox()
+private: Void FillListBox()
 		{
 			checkedListBoxTHEMES->Items->Clear();
 			bunifuDropdownTHEMES->Clear();
@@ -424,8 +423,8 @@ private:
 				}
 			}
 		}
-		//TODO: ошибка
-		Void FillListBoxParametrised(String^ Parameter)
+
+private:Void FillListBoxParametrised(String^ Parameter)
 		{
 			checkedListBoxTHEMES->Items->Clear();
 			int ptr = 0;
@@ -444,7 +443,7 @@ private:
 			}
 		}
 
-		Void FillThemesDB()
+private:Void FillThemesDB()
 		{
 			THEMES.Clear();
 			SQLiteConnection^ con = gcnew SQLiteConnection("Data Source=DataBases\\OAiP.db");
@@ -475,7 +474,6 @@ private:
 				delete con;
 			}
 		}
-
 
 private: System::Void MAINform_Load(System::Object^ sender, System::EventArgs^ e) 
 	{
@@ -622,8 +620,7 @@ private: System::Void bunifuImageButtonQUESTION_Click(System::Object^ sender, Sy
 	}
 }
 
-private:
-	void SetFormNormalSize()
+private: void SetFormNormalSize()
 	{
 		this->ClientSize = System::Drawing::Size(678, 419);
 		panelMAIN->Enabled = true;

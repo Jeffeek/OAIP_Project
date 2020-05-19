@@ -260,6 +260,7 @@ namespace OAIPProject {
 			this->Controls->Add(this->gunaLabel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"RegistrationForm";
+			this->Opacity = 0.8;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"RegistrationForm";
 			this->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &RegistrationForm::RegistrationForm_MouseDown);

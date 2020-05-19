@@ -178,6 +178,7 @@ namespace OAIPProject {
 			this->link_REGISTRATION->AutoSize = true;
 			this->link_REGISTRATION->Font = (gcnew System::Drawing::Font(L"Unispace", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->link_REGISTRATION->LinkBehavior = System::Windows::Forms::LinkBehavior::HoverUnderline;
 			this->link_REGISTRATION->LinkColor = System::Drawing::Color::Aqua;
 			this->link_REGISTRATION->Location = System::Drawing::Point(1, 270);
 			this->link_REGISTRATION->Name = L"link_REGISTRATION";
@@ -208,6 +209,7 @@ namespace OAIPProject {
 			this->link_FP->AutoSize = true;
 			this->link_FP->Font = (gcnew System::Drawing::Font(L"Unispace", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->link_FP->LinkBehavior = System::Windows::Forms::LinkBehavior::HoverUnderline;
 			this->link_FP->LinkColor = System::Drawing::Color::Aqua;
 			this->link_FP->Location = System::Drawing::Point(179, 270);
 			this->link_FP->Name = L"link_FP";
@@ -251,6 +253,7 @@ namespace OAIPProject {
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->AutoSize = true;
+			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->BackColor = System::Drawing::Color::Black;
 			this->ClientSize = System::Drawing::Size(341, 291);
 			this->Controls->Add(this->button_PassVisibility);
@@ -266,6 +269,7 @@ namespace OAIPProject {
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
 			this->Name = L"LoginForm";
+			this->Opacity = 0.9;
 			this->SizeGripStyle = System::Windows::Forms::SizeGripStyle::Hide;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"LoginForm";
@@ -382,8 +386,7 @@ private: System::Void link_REGISTRATION_LinkClicked(System::Object^ sender, Syst
 	REGform->ShowDialog();
 	this->Show();
 }
-private:
-	Point^ lastPoint;
+private: Point^ lastPoint;
 private: System::Void LoginForm_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
 {
 	if (e->Button == System::Windows::Forms::MouseButtons::Left)
