@@ -1,0 +1,1796 @@
+  XanderUI.Properties.Resources.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly XanderUI, Version=1.0.*, Culture=Инвариантный язык (Инвариантная страна): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Class XanderUI.XUIBackgroundSleeper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Sleep(Int32): PrivateScope, Public, HideBySig
+Class XanderUI.XUIBanner: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Drawing.Color BorderColor 'get set' : 
+    System.Drawing.Color BannerColor 'get set' : 
+  Methods:
+    get_BorderColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BorderColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_BannerColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BannerColor(Color): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIBarGraph: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Collections.Generic.List`1[System.Int32] Items 'get set' : 
+    System.Drawing.Color FilledColor 'get set' : 
+    System.Drawing.Color UnfilledColor 'get set' : 
+    System.Drawing.Color SplitterColor 'get set' : 
+    System.Drawing.Color TextColor 'get set' : 
+    SortStyle Sorting 'get set' : 
+    Aligning TextAlignment 'get set' : 
+    Orientation GraphOrientation 'get set' : 
+    Style GraphStyle 'get set' : 
+    Boolean ShowGrid 'get set' : 
+  Methods:
+    get_Items(): PrivateScope, Public, HideBySig, SpecialName
+    set_Items(List`1): PrivateScope, Public, HideBySig, SpecialName
+    get_FilledColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_FilledColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_UnfilledColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_UnfilledColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SplitterColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_SplitterColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_TextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_TextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Sorting(): PrivateScope, Public, HideBySig, SpecialName
+    set_Sorting(SortStyle): PrivateScope, Public, HideBySig, SpecialName
+    get_TextAlignment(): PrivateScope, Public, HideBySig, SpecialName
+    set_TextAlignment(Aligning): PrivateScope, Public, HideBySig, SpecialName
+    get_GraphOrientation(): PrivateScope, Public, HideBySig, SpecialName
+    set_GraphOrientation(Orientation): PrivateScope, Public, HideBySig, SpecialName
+    get_GraphStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_GraphStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowGrid(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowGrid(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    ClearItems(): PrivateScope, Public, HideBySig
+Class XanderUI.XUIBatteryPercentageAPI: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Timer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Value 'get ' : 
+  Methods:
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIButton: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    imgPosition imagePosition : Public
+  Properties:
+    System.Drawing.Color BackColor 'get set' : 
+    System.Drawing.Color ForeColor 'get set' : 
+    System.String Text 'get set' : 
+    Style ButtonStyle 'get set' : 
+    System.Drawing.Color TextColor 'get set' : 
+    System.Drawing.Color BackgroundColor 'get set' : 
+    System.Drawing.Color HoverTextColor 'get set' : 
+    System.Drawing.Color HoverBackgroundColor 'get set' : 
+    System.Drawing.Color ClickTextColor 'get set' : 
+    System.Drawing.Color ClickBackColor 'get set' : 
+    Int32 CornerRadius 'get set' : 
+    System.String ButtonText 'get set' : 
+    System.Drawing.StringAlignment Horizontal_Alignment 'get set' : 
+    System.Drawing.StringAlignment Vertical_Alignment 'get set' : 
+    System.Drawing.Image ButtonImage 'get set' : 
+    imgPosition ImagePosition 'get set' : 
+  Methods:
+    get_BackColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BackColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_ForeColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_ForeColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Text(): PrivateScope, Public, HideBySig, SpecialName
+    set_Text(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ButtonStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_ButtonStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+    get_TextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_TextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_BackgroundColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BackgroundColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_HoverTextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_HoverTextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_HoverBackgroundColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_HoverBackgroundColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_ClickTextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_ClickTextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_ClickBackColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_ClickBackColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_CornerRadius(): PrivateScope, Public, HideBySig, SpecialName
+    set_CornerRadius(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ButtonText(): PrivateScope, Public, HideBySig, SpecialName
+    set_ButtonText(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Horizontal_Alignment(): PrivateScope, Public, HideBySig, SpecialName
+    set_Horizontal_Alignment(StringAlignment): PrivateScope, Public, HideBySig, SpecialName
+    get_Vertical_Alignment(): PrivateScope, Public, HideBySig, SpecialName
+    set_Vertical_Alignment(StringAlignment): PrivateScope, Public, HideBySig, SpecialName
+    get_ButtonImage(): PrivateScope, Public, HideBySig, SpecialName
+    set_ButtonImage(Image): PrivateScope, Public, HideBySig, SpecialName
+    get_ImagePosition(): PrivateScope, Public, HideBySig, SpecialName
+    set_ImagePosition(imgPosition): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUICard: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Drawing.Color Color1 'get set' : 
+    System.Drawing.Color Color2 'get set' : 
+    System.String Text1 'get set' : 
+    System.String Text2 'get set' : 
+    System.String Text3 'get set' : 
+  Methods:
+    get_Color1(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color1(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color2(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color2(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Text1(): PrivateScope, Public, HideBySig, SpecialName
+    set_Text1(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Text2(): PrivateScope, Public, HideBySig, SpecialName
+    set_Text2(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Text3(): PrivateScope, Public, HideBySig, SpecialName
+    set_Text3(String): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUICheckBox: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean Checked 'get set' : 
+    Int32 TickThickness 'get set' : 
+    System.Drawing.Color CheckboxColor 'get set' : 
+    System.Drawing.Color CheckboxCheckColor 'get set' : 
+    System.Drawing.Color CheckboxHoverColor 'get set' : 
+    Style CheckboxStyle 'get set' : 
+  Events:
+    System.EventHandler CheckedStateChanged: 
+  Methods:
+    get_Checked(): PrivateScope, Public, HideBySig, SpecialName
+    set_Checked(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_TickThickness(): PrivateScope, Public, HideBySig, SpecialName
+    set_TickThickness(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_CheckboxColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_CheckboxColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_CheckboxCheckColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_CheckboxCheckColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_CheckboxHoverColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_CheckboxHoverColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_CheckboxStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_CheckboxStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+    add_CheckedStateChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_CheckedStateChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUICircleProgressBar: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 percentage : Public
+    Int32 animationSpeed : Public
+    Boolean isAnimated : Public
+    Int32 textSize : Public
+    System.Drawing.Color textColor : Public
+    Boolean showText : Public
+  Properties:
+    System.Drawing.Color ForeColor 'get set' : 
+    System.String Text 'get set' : 
+    System.Drawing.Color UnFilledColor 'get set' : 
+    System.Drawing.Color FilledColor 'get set' : 
+    Int32 FilledColorAlpha 'get set' : 
+    Int32 UnfilledThickness 'get set' : 
+    Int32 FilledThickness 'get set' : 
+    Int32 Percentage 'get set' : 
+    Int32 AnimationSpeed 'get set' : 
+    Boolean IsAnimated 'get set' : 
+    Int32 TextSize 'get set' : 
+    System.Drawing.Color TextColor 'get set' : 
+    Boolean ShowText 'get set' : 
+  Events:
+    System.EventHandler PercentageChanged: 
+  Methods:
+    get_ForeColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_ForeColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Text(): PrivateScope, Public, HideBySig, SpecialName
+    set_Text(String): PrivateScope, Public, HideBySig, SpecialName
+    get_UnFilledColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_UnFilledColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_FilledColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_FilledColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_FilledColorAlpha(): PrivateScope, Public, HideBySig, SpecialName
+    set_FilledColorAlpha(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_UnfilledThickness(): PrivateScope, Public, HideBySig, SpecialName
+    set_UnfilledThickness(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_FilledThickness(): PrivateScope, Public, HideBySig, SpecialName
+    set_FilledThickness(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Percentage(): PrivateScope, Public, HideBySig, SpecialName
+    set_Percentage(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_AnimationSpeed(): PrivateScope, Public, HideBySig, SpecialName
+    set_AnimationSpeed(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_IsAnimated(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsAnimated(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_TextSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_TextSize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_TextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_TextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowText(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowText(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    add_PercentageChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_PercentageChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIClock: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 CircleThickness 'get set' : 
+    System.Drawing.Color UnfilledHourColor 'get set' : 
+    System.Drawing.Color FilledHourColor 'get set' : 
+    System.Drawing.Color UnfilledMinuteColor 'get set' : 
+    System.Drawing.Color FilledMinuteColor 'get set' : 
+    System.Drawing.Color UnfilledSecondColor 'get set' : 
+    System.Drawing.Color FilledSecondColor 'get set' : 
+    System.Drawing.Color HexagonColor 'get set' : 
+    Boolean ShowSecondsCircle 'get set' : 
+    Boolean ShowMinutesCircle 'get set' : 
+    Boolean ShowHexagon 'get set' : 
+    Boolean ShowAmPm 'get set' : 
+    HourFormat DisplayFormat 'get set' : 
+  Methods:
+    get_CircleThickness(): PrivateScope, Public, HideBySig, SpecialName
+    set_CircleThickness(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_UnfilledHourColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_UnfilledHourColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_FilledHourColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_FilledHourColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_UnfilledMinuteColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_UnfilledMinuteColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_FilledMinuteColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_FilledMinuteColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_UnfilledSecondColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_UnfilledSecondColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_FilledSecondColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_FilledSecondColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_HexagonColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_HexagonColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowSecondsCircle(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowSecondsCircle(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowMinutesCircle(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowMinutesCircle(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowHexagon(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowHexagon(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowAmPm(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowAmPm(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_DisplayFormat(): PrivateScope, Public, HideBySig, SpecialName
+    set_DisplayFormat(HourFormat): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIColorPane: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Drawing.Color BackColor 'get set' : 
+    System.Drawing.Color ForeColor 'get set' : 
+    System.Drawing.Color SelectedColor 'get set' : 
+    System.Drawing.Color GridColor 'get set' : 
+    Boolean ShowGrid 'get set' : 
+    System.Drawing.Color Color1 'get set' : 
+    System.Drawing.Color Color2 'get set' : 
+    System.Drawing.Color Color3 'get set' : 
+    System.Drawing.Color Color4 'get set' : 
+    System.Drawing.Color Color5 'get set' : 
+    System.Drawing.Color Color6 'get set' : 
+    System.Drawing.Color Color7 'get set' : 
+    System.Drawing.Color Color8 'get set' : 
+    System.Drawing.Color Color9 'get set' : 
+    System.Drawing.Color Color10 'get set' : 
+    System.Drawing.Color Color11 'get set' : 
+    System.Drawing.Color Color12 'get set' : 
+    System.Drawing.Color Color13 'get set' : 
+    System.Drawing.Color Color14 'get set' : 
+  Events:
+    System.EventHandler ColorChanged: 
+  Methods:
+    get_BackColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BackColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_ForeColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_ForeColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SelectedColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_SelectedColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_GridColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_GridColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowGrid(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowGrid(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Color1(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color1(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color2(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color2(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color3(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color3(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color4(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color4(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color5(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color5(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color6(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color6(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color7(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color7(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color8(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color8(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color9(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color9(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color10(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color10(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color11(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color11(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color12(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color12(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color13(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color13(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color14(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color14(Color): PrivateScope, Public, HideBySig, SpecialName
+    add_ColorChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ColorChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIColorPicker: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Drawing.Image image : Public
+  Properties:
+    System.Drawing.Image PickerImage 'get set' : 
+    System.Drawing.Color SelectedColor 'get set' : 
+    System.String SelectedColorHex 'get ' : 
+    Boolean ShowColorPreview 'get set' : 
+  Events:
+    System.EventHandler SelectedColorChanged: 
+  Methods:
+    get_PickerImage(): PrivateScope, Public, HideBySig, SpecialName
+    set_PickerImage(Image): PrivateScope, Public, HideBySig, SpecialName
+    get_SelectedColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_SelectedColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SelectedColorHex(): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowColorPreview(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowColorPreview(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    add_SelectedColorChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_SelectedColorChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIFormDesign: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Panel
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Windows.Forms.Panel WorkingArea 'get ' : 
+    System.ComponentModel.ISite Site 'get set' : 
+    System.String TitleText 'get set' : 
+    Boolean ShowMaximize 'get set' : 
+    Boolean ExitApplication 'get set' : 
+    Boolean ShowMinimize 'get set' : 
+    System.Drawing.Color MaterialForeColor 'get set' : 
+    System.Drawing.Color MaterialBackColor 'get set' : 
+    Style FormStyle 'get set' : 
+  Methods:
+    get_WorkingArea(): PrivateScope, Public, HideBySig, SpecialName
+    get_Site(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Site(ISite): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_TitleText(): PrivateScope, Public, HideBySig, SpecialName
+    set_TitleText(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowMaximize(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowMaximize(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ExitApplication(): PrivateScope, Public, HideBySig, SpecialName
+    set_ExitApplication(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowMinimize(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowMinimize(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_MaterialForeColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaterialForeColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_MaterialBackColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaterialBackColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_FormStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_FormStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUICustomGroupbox: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.GroupBox
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Drawing.Color BorderColor 'get set' : 
+    System.Drawing.Color TextColor 'get set' : 
+    Int32 BorderWidth 'get set' : 
+    Boolean ShowText 'get set' : 
+  Methods:
+    get_BorderColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BorderColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_TextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_TextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_BorderWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_BorderWidth(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowText(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowText(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIExtFSWatcher: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.IO.NotifyFilters UpdateOn 'get set' : 
+    Boolean WatchSubdirectories 'get set' : 
+    System.String WatchPath 'get set' : 
+    System.String Filters 'get set' : 
+    System.Windows.Forms.Control OutputControl 'get set' : 
+    Boolean SlimOutput 'get set' : 
+  Events:
+    System.EventHandler ServiceStarted: 
+    System.EventHandler ServiceStopped: 
+    System.IO.FileSystemEventHandler FileCreated: 
+    System.IO.FileSystemEventHandler FileDeleted: 
+    System.IO.FileSystemEventHandler FileChanged: 
+    System.IO.RenamedEventHandler FileRenamed: 
+  Methods:
+    add_ServiceStarted(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ServiceStarted(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ServiceStopped(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ServiceStopped(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_FileCreated(FileSystemEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_FileCreated(FileSystemEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_FileDeleted(FileSystemEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_FileDeleted(FileSystemEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_FileChanged(FileSystemEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_FileChanged(FileSystemEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_FileRenamed(RenamedEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_FileRenamed(RenamedEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    get_UpdateOn(): PrivateScope, Public, HideBySig, SpecialName
+    set_UpdateOn(NotifyFilters): PrivateScope, Public, HideBySig, SpecialName
+    get_WatchSubdirectories(): PrivateScope, Public, HideBySig, SpecialName
+    set_WatchSubdirectories(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_WatchPath(): PrivateScope, Public, HideBySig, SpecialName
+    set_WatchPath(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Filters(): PrivateScope, Public, HideBySig, SpecialName
+    set_Filters(String): PrivateScope, Public, HideBySig, SpecialName
+    get_OutputControl(): PrivateScope, Public, HideBySig, SpecialName
+    set_OutputControl(Control): PrivateScope, Public, HideBySig, SpecialName
+    get_SlimOutput(): PrivateScope, Public, HideBySig, SpecialName
+    set_SlimOutput(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    StartService(): PrivateScope, Public, HideBySig
+    StopService(): PrivateScope, Public, HideBySig
+    OnRenamed(Object, RenamedEventArgs): PrivateScope, Public, HideBySig
+Class XanderUI.FormDropShadow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.ComponentModel.ISite Site 'get set' : 
+    Int32 ShadowAngle 'get set' : 
+    System.Windows.Forms.Form EffectedForm 'get set' : 
+  Methods:
+    get_Site(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Site(ISite): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_ShadowAngle(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShadowAngle(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_EffectedForm(): PrivateScope, Public, HideBySig, SpecialName
+    set_EffectedForm(Form): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIFormHandle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 WM_NCLBUTTONDOWN = 161 : Public, Static, Literal, HasDefault
+    Int32 HT_CAPTION = 2 : Public, Static, Literal, HasDefault
+  Properties:
+    System.Windows.Forms.Control HandleControl 'get set' : 
+    Boolean DockAtTop 'get set' : 
+  Methods:
+    get_HandleControl(): PrivateScope, Public, HideBySig, SpecialName
+    set_HandleControl(Control): PrivateScope, Public, HideBySig, SpecialName
+    get_DockAtTop(): PrivateScope, Public, HideBySig, SpecialName
+    set_DockAtTop(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    SendMessage(IntPtr, Int32, Int32, Int32): PrivateScope, Public, Static, HideBySig, PinvokeImpl
+    ReleaseCapture(): PrivateScope, Public, Static, HideBySig, PinvokeImpl
+Class XanderUI.XUIGauge: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Style gaugeStyle : Public
+    Int32 thickness : Public
+    Int32 dialThickness : Public
+    Int32 percentage : Public
+    System.Drawing.Color dialColor : Public
+    System.Drawing.Color unfilledColor : Public
+    System.Drawing.Color filledColor : Public
+  Properties:
+    Style GaugeStyle 'get set' : 
+    Int32 Thickness 'get set' : 
+    Int32 DialThickness 'get set' : 
+    Int32 Percentage 'get set' : 
+    System.Drawing.Color DialColor 'get set' : 
+    System.Drawing.Color UnfilledColor 'get set' : 
+    System.Drawing.Color FilledColor 'get set' : 
+  Methods:
+    get_GaugeStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_GaugeStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+    get_Thickness(): PrivateScope, Public, HideBySig, SpecialName
+    set_Thickness(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DialThickness(): PrivateScope, Public, HideBySig, SpecialName
+    set_DialThickness(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Percentage(): PrivateScope, Public, HideBySig, SpecialName
+    set_Percentage(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DialColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_DialColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_UnfilledColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_UnfilledColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_FilledColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_FilledColor(Color): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIPercentage: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    IntToPercent(Int32, Int32): PrivateScope, Public, Static, HideBySig
+    PercentToInt(Int32, Int32): PrivateScope, Public, Static, HideBySig
+Class XanderUI.XUIGradientPanel: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Panel
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Drawing.Color BackColor 'get set' : 
+    System.Drawing.Color ForeColor 'get set' : 
+    System.Drawing.Color PrimerColor 'get set' : 
+    System.Drawing.Color TopLeft 'get set' : 
+    System.Drawing.Color TopRight 'get set' : 
+    System.Drawing.Color BottomLeft 'get set' : 
+    System.Drawing.Color BottomRight 'get set' : 
+    GradientStyle Style 'get set' : 
+  Methods:
+    get_BackColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BackColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_ForeColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_ForeColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_PrimerColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_PrimerColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_TopLeft(): PrivateScope, Public, HideBySig, SpecialName
+    set_TopLeft(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_TopRight(): PrivateScope, Public, HideBySig, SpecialName
+    set_TopRight(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_BottomLeft(): PrivateScope, Public, HideBySig, SpecialName
+    set_BottomLeft(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_BottomRight(): PrivateScope, Public, HideBySig, SpecialName
+    set_BottomRight(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Style(): PrivateScope, Public, HideBySig, SpecialName
+    set_Style(GradientStyle): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIIntRound: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    IntRound(Int32, Round): PrivateScope, Public, Static, HideBySig
+    IntRoundUp(Int32, Round): PrivateScope, Public, Static, HideBySig
+    IntRoundDown(Int32, Round): PrivateScope, Public, Static, HideBySig
+Class XanderUI.XUIJoyStick: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Direction JoystickDirection 'get ' : 
+    System.Windows.Forms.Control MovableObject 'get set' : 
+    Boolean KeepOnScreen 'get set' : 
+    Int32 Sensitivity 'get set' : 
+    System.Drawing.Image BackgroundImage 'get set' : 
+    System.Drawing.Color JoyStickColor 'get set' : 
+  Events:
+    System.EventHandler DirectionChanged: 
+  Methods:
+    get_JoystickDirection(): PrivateScope, Public, HideBySig, SpecialName
+    get_MovableObject(): PrivateScope, Public, HideBySig, SpecialName
+    set_MovableObject(Control): PrivateScope, Public, HideBySig, SpecialName
+    get_KeepOnScreen(): PrivateScope, Public, HideBySig, SpecialName
+    set_KeepOnScreen(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Sensitivity(): PrivateScope, Public, HideBySig, SpecialName
+    set_Sensitivity(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_BackgroundImage(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_BackgroundImage(Image): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_JoyStickColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_JoyStickColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    add_DirectionChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_DirectionChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUILineGraph: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Collections.Generic.List`1[System.Int32] Items 'get set' : 
+    Boolean ShowVerticalLines 'get set' : 
+    System.Drawing.Color BackGroundColor 'get set' : 
+    System.Drawing.Color BelowLineColor 'get set' : 
+    System.Drawing.Color LineColor 'get set' : 
+    System.Drawing.Color BorderColor 'get set' : 
+    System.Drawing.Color VerticalLineColor 'get set' : 
+    System.Drawing.Color GraphTitleColor 'get set' : 
+    System.String GraphTitle 'get set' : 
+    Boolean ShowTitle 'get set' : 
+    Boolean ShowBorder 'get set' : 
+    Boolean ShowPoints 'get set' : 
+    Int32 PointSize 'get set' : 
+    System.Drawing.StringAlignment TitleAlignment 'get set' : 
+    Style GraphStyle 'get set' : 
+  Methods:
+    get_Items(): PrivateScope, Public, HideBySig, SpecialName
+    set_Items(List`1): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowVerticalLines(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowVerticalLines(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_BackGroundColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BackGroundColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_BelowLineColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BelowLineColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_LineColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_LineColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_BorderColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BorderColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_VerticalLineColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_VerticalLineColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_GraphTitleColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_GraphTitleColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_GraphTitle(): PrivateScope, Public, HideBySig, SpecialName
+    set_GraphTitle(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowTitle(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowTitle(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowBorder(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowBorder(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowPoints(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowPoints(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_PointSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_PointSize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_TitleAlignment(): PrivateScope, Public, HideBySig, SpecialName
+    set_TitleAlignment(StringAlignment): PrivateScope, Public, HideBySig, SpecialName
+    get_GraphStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_GraphStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUINavigationBar: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Style NavBarStyle 'get set' : 
+    System.Drawing.Color ItemColor 'get set' : 
+    System.Drawing.Color TitleColor 'get set' : 
+    System.Drawing.Color BackgroundColor 'get set' : 
+    NavigationItem LeftItem 'get set' : 
+    NavigationItem RightItem 'get set' : 
+    System.String Title 'get set' : 
+    System.String LeftCustomText 'get set' : 
+    System.String RightCustomText 'get set' : 
+    System.Drawing.Image LeftCustomImage 'get set' : 
+    System.Drawing.Image RightCustomImage 'get set' : 
+  Events:
+    System.EventHandler LeftItemClick: 
+    System.EventHandler RightItemClick: 
+  Methods:
+    get_NavBarStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_NavBarStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+    get_ItemColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_ItemColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_TitleColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_TitleColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_BackgroundColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BackgroundColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_LeftItem(): PrivateScope, Public, HideBySig, SpecialName
+    set_LeftItem(NavigationItem): PrivateScope, Public, HideBySig, SpecialName
+    get_RightItem(): PrivateScope, Public, HideBySig, SpecialName
+    set_RightItem(NavigationItem): PrivateScope, Public, HideBySig, SpecialName
+    get_Title(): PrivateScope, Public, HideBySig, SpecialName
+    set_Title(String): PrivateScope, Public, HideBySig, SpecialName
+    get_LeftCustomText(): PrivateScope, Public, HideBySig, SpecialName
+    set_LeftCustomText(String): PrivateScope, Public, HideBySig, SpecialName
+    get_RightCustomText(): PrivateScope, Public, HideBySig, SpecialName
+    set_RightCustomText(String): PrivateScope, Public, HideBySig, SpecialName
+    get_LeftCustomImage(): PrivateScope, Public, HideBySig, SpecialName
+    set_LeftCustomImage(Image): PrivateScope, Public, HideBySig, SpecialName
+    get_RightCustomImage(): PrivateScope, Public, HideBySig, SpecialName
+    set_RightCustomImage(Image): PrivateScope, Public, HideBySig, SpecialName
+    add_LeftItemClick(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_LeftItemClick(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_RightItemClick(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_RightItemClick(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUISegment: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Items 'get set' : 
+    Int32 SelectedIndex 'get set' : 
+    Style SegmentStyle 'get set' : 
+    System.Drawing.Color SegmentColor 'get set' : 
+    System.Drawing.Color SegmentBackColor 'get set' : 
+    System.Drawing.Color SegmentActiveTextColor 'get set' : 
+    System.Drawing.Color SegmentInactiveTextColor 'get set' : 
+  Events:
+    System.EventHandler IndexChanged: 
+  Methods:
+    get_Items(): PrivateScope, Public, HideBySig, SpecialName
+    set_Items(String): PrivateScope, Public, HideBySig, SpecialName
+    get_SelectedIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_SelectedIndex(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SegmentStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_SegmentStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+    get_SegmentColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_SegmentColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SegmentBackColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_SegmentBackColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SegmentActiveTextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_SegmentActiveTextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SegmentInactiveTextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_SegmentInactiveTextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    add_IndexChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_IndexChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUISlidingPanel: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :XanderUI.XUIGradientPanel
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean Collapsed 'get set' : 
+    Int32 PanelWidthExpanded 'get set' : 
+    Int32 PanelWidthCollapsed 'get set' : 
+    Boolean HideControls 'get set' : 
+    System.Windows.Forms.Control CollapseControl 'get set' : 
+  Events:
+    System.EventHandler OnCollapsedStateChanged: 
+  Methods:
+    get_Collapsed(): PrivateScope, Public, HideBySig, SpecialName
+    set_Collapsed(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_PanelWidthExpanded(): PrivateScope, Public, HideBySig, SpecialName
+    set_PanelWidthExpanded(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_PanelWidthCollapsed(): PrivateScope, Public, HideBySig, SpecialName
+    set_PanelWidthCollapsed(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_HideControls(): PrivateScope, Public, HideBySig, SpecialName
+    set_HideControls(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_CollapseControl(): PrivateScope, Public, HideBySig, SpecialName
+    set_CollapseControl(Control): PrivateScope, Public, HideBySig, SpecialName
+    add_OnCollapsedStateChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_OnCollapsedStateChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUISplashScreen: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean AllowDragging 'get set' : 
+    Boolean ShowProgressBar 'get set' : 
+    Boolean IsEllipse 'get set' : 
+    Int32 EllipseCornerRadius 'get set' : 
+    Style ProgressBarStyle 'get set' : 
+    System.Drawing.Color LoadedColor 'get set' : 
+    System.Drawing.Color UnloadedColor 'get set' : 
+    Int32 SecondsDisplayed 'get set' : 
+    System.Drawing.Color BackColor 'get set' : 
+    System.Drawing.Size SplashSize 'get set' : 
+    System.Drawing.Color TopTextColor 'get set' : 
+    System.String TopText 'get set' : 
+    Int32 TopTextSize 'get set' : 
+    System.Drawing.Color BottomTextColor 'get set' : 
+    System.String BottomText 'get set' : 
+    Int32 BottomTextSize 'get set' : 
+  Methods:
+    get_AllowDragging(): PrivateScope, Public, HideBySig, SpecialName
+    set_AllowDragging(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowProgressBar(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowProgressBar(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsEllipse(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsEllipse(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_EllipseCornerRadius(): PrivateScope, Public, HideBySig, SpecialName
+    set_EllipseCornerRadius(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ProgressBarStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_ProgressBarStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+    get_LoadedColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_LoadedColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_UnloadedColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_UnloadedColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SecondsDisplayed(): PrivateScope, Public, HideBySig, SpecialName
+    set_SecondsDisplayed(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_BackColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BackColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SplashSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_SplashSize(Size): PrivateScope, Public, HideBySig, SpecialName
+    get_TopTextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_TopTextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_TopText(): PrivateScope, Public, HideBySig, SpecialName
+    set_TopText(String): PrivateScope, Public, HideBySig, SpecialName
+    get_TopTextSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_TopTextSize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_BottomTextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BottomTextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_BottomText(): PrivateScope, Public, HideBySig, SpecialName
+    set_BottomText(String): PrivateScope, Public, HideBySig, SpecialName
+    get_BottomTextSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_BottomTextSize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    initializeLoader(Control): PrivateScope, Public, HideBySig
+Class XanderUI.XUIFlatMenuStrip: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.MenuStrip
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Drawing.Color ItemBackColor 'get set' : 
+    System.Drawing.Color SelectedBackColor 'get set' : 
+    System.Drawing.Color HoverBackColor 'get set' : 
+    System.Drawing.Color TextColor 'get set' : 
+    System.Drawing.Color HoverTextColor 'get set' : 
+    System.Drawing.Color SelectedTextColor 'get set' : 
+    System.Drawing.Color SeperatorColor 'get set' : 
+  Methods:
+    get_ItemBackColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_ItemBackColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SelectedBackColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_SelectedBackColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_HoverBackColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_HoverBackColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_TextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_TextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_HoverTextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_HoverTextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SelectedTextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_SelectedTextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SeperatorColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_SeperatorColor(Color): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIKitMenuStripRenderer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.ToolStripRenderer
+    Void .ctor(System.Drawing.Color, System.Drawing.Color, System.Drawing.Color, System.Drawing.Color, System.Drawing.Color, System.Drawing.Color, System.Drawing.Color, System.Drawing.Color): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Drawing.Color headerColor : Public
+    System.Drawing.Color backColor : Public
+    System.Drawing.Color selectedBackColor : Public
+    System.Drawing.Color hoverBackColor : Public
+    System.Drawing.Color textColor : Public
+    System.Drawing.Color hoverTextColor : Public
+    System.Drawing.Color selectedTextColor : Public
+    System.Drawing.Color seperatorColor : Public
+Class XanderUI.XUIObjectAnimator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    FormAnimate(Form, FormAnimation, Int32): PrivateScope, Public, HideBySig
+    StandardAnimate(Object, StandardAnimation, Int32): PrivateScope, Public, HideBySig
+    ColorAnimate(Object, Color, ColorAnimation, Boolean, Int32): PrivateScope, Public, HideBySig
+Class XanderUI.XUIObjectEllipse: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.ComponentModel.ISite Site 'get set' : 
+    Int32 CornerRadius 'get set' : 
+    System.Windows.Forms.Control EffectedControl 'get set' : 
+    System.Windows.Forms.Form EffectedForm 'get set' : 
+  Methods:
+    get_Site(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Site(ISite): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CornerRadius(): PrivateScope, Public, HideBySig, SpecialName
+    set_CornerRadius(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_EffectedControl(): PrivateScope, Public, HideBySig, SpecialName
+    set_EffectedControl(Control): PrivateScope, Public, HideBySig, SpecialName
+    get_EffectedForm(): PrivateScope, Public, HideBySig, SpecialName
+    set_EffectedForm(Form): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUICustomPictureBox: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsElipse 'get set' : 
+    System.Drawing.Image Image 'get set' : 
+    Boolean IsParallax 'get set' : 
+    Boolean FilterEnabled 'get set' : 
+    System.Drawing.Color Color1 'get set' : 
+    System.Drawing.Color Color2 'get set' : 
+    Int32 FilterAlpha 'get set' : 
+  Methods:
+    get_IsElipse(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsElipse(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Image(): PrivateScope, Public, HideBySig, SpecialName
+    set_Image(Image): PrivateScope, Public, HideBySig, SpecialName
+    get_IsParallax(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsParallax(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_FilterEnabled(): PrivateScope, Public, HideBySig, SpecialName
+    set_FilterEnabled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Color1(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color1(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Color2(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color2(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_FilterAlpha(): PrivateScope, Public, HideBySig, SpecialName
+    set_FilterAlpha(Int32): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIPieGraph: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.List`1[System.Int32] numbers : Public
+  Properties:
+    System.Collections.Generic.List`1[System.Int32] Numbers 'get set' : 
+  Methods:
+    get_Numbers(): PrivateScope, Public, HideBySig, SpecialName
+    set_Numbers(List`1): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIFlatProgressBar: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Style BarStyle 'get set' : 
+    Int32 Value 'get set' : 
+    System.Drawing.Color CompleteColor 'get set' : 
+    System.Drawing.Color BorderColor 'get set' : 
+    Boolean ShowBorder 'get set' : 
+    System.Drawing.Color InocmpletedColor 'get set' : 
+    Int32 MaxValue 'get set' : 
+  Methods:
+    get_BarStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_BarStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    set_Value(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_CompleteColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_CompleteColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_BorderColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BorderColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowBorder(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowBorder(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_InocmpletedColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_InocmpletedColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxValue(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxValue(Int32): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIRadio: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean Checked 'get set' : 
+    System.Drawing.Color RadioColor 'get set' : 
+    System.Drawing.Color RadioHoverColor 'get set' : 
+    Style RadioStyle 'get set' : 
+  Methods:
+    get_Checked(): PrivateScope, Public, HideBySig, SpecialName
+    set_Checked(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_RadioColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_RadioColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_RadioHoverColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_RadioHoverColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_RadioStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_RadioStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUISlider: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 BarThickness 'get set' : 
+    Int32 BigStepIncrement 'get set' : 
+    Int32 Percentage 'get set' : 
+    System.Drawing.Color FilledColor 'get set' : 
+    System.Drawing.Color UnfilledColor 'get set' : 
+    System.Drawing.Color KnobColor 'get set' : 
+    System.Drawing.Image KnobImage 'get set' : 
+    Boolean QuickHopping 'get set' : 
+    Style SliderStyle 'get set' : 
+  Events:
+    System.EventHandler Scroll: 
+  Methods:
+    get_BarThickness(): PrivateScope, Public, HideBySig, SpecialName
+    set_BarThickness(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_BigStepIncrement(): PrivateScope, Public, HideBySig, SpecialName
+    set_BigStepIncrement(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Percentage(): PrivateScope, Public, HideBySig, SpecialName
+    set_Percentage(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_FilledColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_FilledColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_UnfilledColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_UnfilledColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_KnobColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_KnobColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_KnobImage(): PrivateScope, Public, HideBySig, SpecialName
+    set_KnobImage(Image): PrivateScope, Public, HideBySig, SpecialName
+    get_QuickHopping(): PrivateScope, Public, HideBySig, SpecialName
+    set_QuickHopping(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_SliderStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_SliderStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+    add_Scroll(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_Scroll(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUISuperButton: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    imgPosition imagePosition : Public
+  Properties:
+    System.Drawing.Color BackColor 'get set' : 
+    System.Drawing.Color ForeColor 'get set' : 
+    System.String Text 'get set' : 
+    Style ButtonStyle 'get set' : 
+    System.Drawing.Color TextColor 'get set' : 
+    System.Drawing.Color BackgroundColor 'get set' : 
+    Boolean SuperSelected 'get set' : 
+    System.Drawing.Color HoverTextColor 'get set' : 
+    System.Drawing.Color HoverBackgroundColor 'get set' : 
+    System.Drawing.Color SelectedTextColor 'get set' : 
+    System.Drawing.Color SelectedBackColor 'get set' : 
+    Int32 CornerRadius 'get set' : 
+    System.String ButtonText 'get set' : 
+    System.Drawing.StringAlignment Horizontal_Alignment 'get set' : 
+    System.Drawing.StringAlignment Vertical_Alignment 'get set' : 
+    System.Drawing.Image ButtonImage 'get set' : 
+    System.Drawing.Drawing2D.SmoothingMode ButtonSmoothing 'get set' : 
+    imgPosition ImagePosition 'get set' : 
+  Methods:
+    get_BackColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BackColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_ForeColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_ForeColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Text(): PrivateScope, Public, HideBySig, SpecialName
+    set_Text(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ButtonStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_ButtonStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+    get_TextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_TextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_BackgroundColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BackgroundColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SuperSelected(): PrivateScope, Public, HideBySig, SpecialName
+    set_SuperSelected(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_HoverTextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_HoverTextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_HoverBackgroundColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_HoverBackgroundColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SelectedTextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_SelectedTextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_SelectedBackColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_SelectedBackColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_CornerRadius(): PrivateScope, Public, HideBySig, SpecialName
+    set_CornerRadius(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ButtonText(): PrivateScope, Public, HideBySig, SpecialName
+    set_ButtonText(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Horizontal_Alignment(): PrivateScope, Public, HideBySig, SpecialName
+    set_Horizontal_Alignment(StringAlignment): PrivateScope, Public, HideBySig, SpecialName
+    get_Vertical_Alignment(): PrivateScope, Public, HideBySig, SpecialName
+    set_Vertical_Alignment(StringAlignment): PrivateScope, Public, HideBySig, SpecialName
+    get_ButtonImage(): PrivateScope, Public, HideBySig, SpecialName
+    set_ButtonImage(Image): PrivateScope, Public, HideBySig, SpecialName
+    get_ButtonSmoothing(): PrivateScope, Public, HideBySig, SpecialName
+    set_ButtonSmoothing(SmoothingMode): PrivateScope, Public, HideBySig, SpecialName
+    get_ImagePosition(): PrivateScope, Public, HideBySig, SpecialName
+    set_ImagePosition(imgPosition): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUISwitch: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Style SwitchStyle 'get set' : 
+    State SwitchState 'get set' : 
+    System.Drawing.Color OnColor 'get set' : 
+    System.Drawing.Color OffColor 'get set' : 
+    System.Drawing.Color HandleOnColor 'get set' : 
+    System.Drawing.Color HandleOffColor 'get set' : 
+  Events:
+    System.EventHandler SwitchStateChanged: 
+  Methods:
+    get_SwitchStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_SwitchStyle(Style): PrivateScope, Public, HideBySig, SpecialName
+    get_SwitchState(): PrivateScope, Public, HideBySig, SpecialName
+    set_SwitchState(State): PrivateScope, Public, HideBySig, SpecialName
+    get_OnColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_OnColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_OffColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_OffColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_HandleOnColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_HandleOnColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_HandleOffColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_HandleOffColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    add_SwitchStateChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_SwitchStateChanged(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIFlatTab: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.TabControl
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Drawing.Color ActiveTextColor 'get set' : 
+    System.Drawing.Color ActiveHeaderColor 'get set' : 
+    System.Drawing.Color InActiveTextColor 'get set' : 
+    System.Drawing.Color InActiveHeaderColor 'get set' : 
+    System.Drawing.Color HeaderBackgroundColor 'get set' : 
+    System.Drawing.Color BorderColor 'get set' : 
+    System.Drawing.Color PageColor 'get set' : 
+    Boolean ShowBorder 'get set' : 
+  Methods:
+    get_ActiveTextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_ActiveTextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_ActiveHeaderColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_ActiveHeaderColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_InActiveTextColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_InActiveTextColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_InActiveHeaderColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_InActiveHeaderColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_HeaderBackgroundColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_HeaderBackgroundColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_BorderColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BorderColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_PageColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_PageColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_ShowBorder(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShowBorder(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUICustomToolstrip: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.ToolStrip
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Drawing.Color BorderColor 'get set' : 
+  Methods:
+    get_BorderColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_BorderColor(Color): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.ToolStripStripeRemoval: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.ToolStripSystemRenderer
+    Void .ctor(System.Drawing.Color): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Drawing.Color BorderColor : Public
+Class XanderUI.XUIVolumeController: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    VolumeUp(): PrivateScope, Public, HideBySig
+    VolumeDown(): PrivateScope, Public, HideBySig
+    Mute(): PrivateScope, Public, HideBySig
+    SetVolume(Int32): PrivateScope, Public, HideBySig
+Class XanderUI.XUIWeatherClient: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Degrees 'get ' : 
+    System.String CurrentTime 'get ' : 
+    System.String Forecast 'get ' : 
+    System.String Wind 'get ' : 
+    System.String Description 'get ' : 
+    System.String WeatherImage 'get ' : 
+  Methods:
+    get_Degrees(): PrivateScope, Public, HideBySig, SpecialName
+    get_CurrentTime(): PrivateScope, Public, HideBySig, SpecialName
+    get_Forecast(): PrivateScope, Public, HideBySig, SpecialName
+    get_Wind(): PrivateScope, Public, HideBySig, SpecialName
+    get_Description(): PrivateScope, Public, HideBySig, SpecialName
+    get_WeatherImage(): PrivateScope, Public, HideBySig, SpecialName
+    syncWeather(Cities): PrivateScope, Public, HideBySig
+Class XanderUI.XUIWidget: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    SetWidget(Control): PrivateScope, Public, HideBySig
+Class XanderUI.XUIWidgetPanel: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Panel
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean ControlsAsWidgets 'get set' : 
+  Methods:
+    get_ControlsAsWidgets(): PrivateScope, Public, HideBySig, SpecialName
+    set_ControlsAsWidgets(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.XUIWifiPercentageAPI: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Timer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Value 'get ' : 
+    System.String SSID 'get ' : 
+  Methods:
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    get_SSID(): PrivateScope, Public, HideBySig, SpecialName
+Class XanderUI.Designers.FormDesigner: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Design.ParentControlDesigner
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Initialize(IComponent): PrivateScope, Public, Virtual, HideBySig
+Struct XanderUI.XUIBarGraph+SortStyle: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SortStyle Ascending = 0 : Public, Static, Literal, HasDefault
+    SortStyle Descending = 1 : Public, Static, Literal, HasDefault
+    SortStyle Normal = 2 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIBarGraph+Aligning: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Aligning Near = 0 : Public, Static, Literal, HasDefault
+    Aligning Center = 1 : Public, Static, Literal, HasDefault
+    Aligning Far = 2 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIBarGraph+Orientation: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Orientation Horizontal = 0 : Public, Static, Literal, HasDefault
+    Orientation Vertical = 1 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIBarGraph+Style: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Style Flat = 0 : Public, Static, Literal, HasDefault
+    Style Material = 1 : Public, Static, Literal, HasDefault
+    Style Bootstrap = 2 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIButton+imgPosition: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    imgPosition Left = 0 : Public, Static, Literal, HasDefault
+    imgPosition Right = 1 : Public, Static, Literal, HasDefault
+    imgPosition Center = 2 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIButton+Style: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Style Material = 0 : Public, Static, Literal, HasDefault
+    Style Dark = 1 : Public, Static, Literal, HasDefault
+    Style MacOS = 2 : Public, Static, Literal, HasDefault
+    Style Invert = 3 : Public, Static, Literal, HasDefault
+    Style MaterialRounded = 4 : Public, Static, Literal, HasDefault
+    Style MaterialEllipse = 5 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUICheckBox+Style: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Style iOS = 0 : Public, Static, Literal, HasDefault
+    Style Material = 1 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIClock+HourFormat: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    HourFormat TwelveHour = 0 : Public, Static, Literal, HasDefault
+    HourFormat TwentyFourHour = 1 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIFormDesign+Style: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Style Material = 0 : Public, Static, Literal, HasDefault
+    Style MacOS = 1 : Public, Static, Literal, HasDefault
+    Style Ubuntu = 2 : Public, Static, Literal, HasDefault
+Class XanderUI.FormDropShadow+DropShadow: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Struct XanderUI.XUIGauge+Style: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Style Standard = 0 : Public, Static, Literal, HasDefault
+    Style Material = 1 : Public, Static, Literal, HasDefault
+    Style Flat = 2 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIGradientPanel+GradientStyle: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    GradientStyle Horizontal = 0 : Public, Static, Literal, HasDefault
+    GradientStyle Vertical = 1 : Public, Static, Literal, HasDefault
+    GradientStyle Corners = 2 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIIntRound+Round: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Round Ten = 0 : Public, Static, Literal, HasDefault
+    Round Hundred = 1 : Public, Static, Literal, HasDefault
+    Round Thousand = 2 : Public, Static, Literal, HasDefault
+    Round TenThousand = 3 : Public, Static, Literal, HasDefault
+    Round HundredThousand = 4 : Public, Static, Literal, HasDefault
+    Round Million = 5 : Public, Static, Literal, HasDefault
+    Round TenMillion = 6 : Public, Static, Literal, HasDefault
+    Round HundredMillion = 7 : Public, Static, Literal, HasDefault
+    Round Billion = 8 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIJoyStick+Direction: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Direction UpperLeft = 0 : Public, Static, Literal, HasDefault
+    Direction MiddleLeft = 1 : Public, Static, Literal, HasDefault
+    Direction LowerLeft = 2 : Public, Static, Literal, HasDefault
+    Direction UpperCenter = 3 : Public, Static, Literal, HasDefault
+    Direction MiddleCenter = 4 : Public, Static, Literal, HasDefault
+    Direction LowerCenter = 5 : Public, Static, Literal, HasDefault
+    Direction UpperRight = 6 : Public, Static, Literal, HasDefault
+    Direction MiddleRight = 7 : Public, Static, Literal, HasDefault
+    Direction LowerRight = 8 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUILineGraph+Style: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Style Flat = 0 : Public, Static, Literal, HasDefault
+    Style Material = 1 : Public, Static, Literal, HasDefault
+    Style Curved = 2 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUINavigationBar+NavigationItem: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    NavigationItem Menu = 0 : Public, Static, Literal, HasDefault
+    NavigationItem None = 1 : Public, Static, Literal, HasDefault
+    NavigationItem Back = 2 : Public, Static, Literal, HasDefault
+    NavigationItem Next = 3 : Public, Static, Literal, HasDefault
+    NavigationItem CustomText = 4 : Public, Static, Literal, HasDefault
+    NavigationItem CustomImage = 5 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUINavigationBar+Style: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Style iOS = 0 : Public, Static, Literal, HasDefault
+    Style Android = 1 : Public, Static, Literal, HasDefault
+    Style Material = 2 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUISegment+Style: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Style iOS = 0 : Public, Static, Literal, HasDefault
+    Style Android = 1 : Public, Static, Literal, HasDefault
+    Style Material = 2 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIObjectAnimator+ColorAnimation: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ColorAnimation FillEllipse = 0 : Public, Static, Literal, HasDefault
+    ColorAnimation FillSquare = 1 : Public, Static, Literal, HasDefault
+    ColorAnimation SlideFill = 2 : Public, Static, Literal, HasDefault
+    ColorAnimation StripeFill = 3 : Public, Static, Literal, HasDefault
+    ColorAnimation SplitFill = 4 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIObjectAnimator+StandardAnimation: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    StandardAnimation SlideUp = 0 : Public, Static, Literal, HasDefault
+    StandardAnimation SlideDown = 1 : Public, Static, Literal, HasDefault
+    StandardAnimation SlideLeft = 2 : Public, Static, Literal, HasDefault
+    StandardAnimation SlideRight = 3 : Public, Static, Literal, HasDefault
+    StandardAnimation SlugRight = 4 : Public, Static, Literal, HasDefault
+    StandardAnimation SlugLeft = 5 : Public, Static, Literal, HasDefault
+    StandardAnimation Hop = 6 : Public, Static, Literal, HasDefault
+    StandardAnimation ShootRight = 7 : Public, Static, Literal, HasDefault
+    StandardAnimation ShootLeft = 8 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIObjectAnimator+FormAnimation: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    FormAnimation FadeIn = 0 : Public, Static, Literal, HasDefault
+    FormAnimation FadeOut = 1 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIFlatProgressBar+Style: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Style Flat = 0 : Public, Static, Literal, HasDefault
+    Style Material = 1 : Public, Static, Literal, HasDefault
+    Style IOS = 2 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIRadio+Style: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Style iOS = 0 : Public, Static, Literal, HasDefault
+    Style Android = 1 : Public, Static, Literal, HasDefault
+    Style Material = 2 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUISlider+Style: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Style Flat = 0 : Public, Static, Literal, HasDefault
+    Style Material = 1 : Public, Static, Literal, HasDefault
+    Style MacOS = 2 : Public, Static, Literal, HasDefault
+    Style Android = 3 : Public, Static, Literal, HasDefault
+    Style Windows10 = 4 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUISuperButton+Style: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Style Flat = 0 : Public, Static, Literal, HasDefault
+    Style Elliptical = 1 : Public, Static, Literal, HasDefault
+    Style RoundedEdges = 2 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUISuperButton+imgPosition: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    imgPosition Left = 0 : Public, Static, Literal, HasDefault
+    imgPosition Right = 1 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUISwitch+Style: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Style Vertical = 0 : Public, Static, Literal, HasDefault
+    Style Horizontal = 1 : Public, Static, Literal, HasDefault
+    Style iOS = 2 : Public, Static, Literal, HasDefault
+    Style Android = 3 : Public, Static, Literal, HasDefault
+    Style Dark = 4 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUISwitch+State: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    State On = 0 : Public, Static, Literal, HasDefault
+    State Off = 1 : Public, Static, Literal, HasDefault
+Struct XanderUI.XUIWeatherClient+Cities: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Cities Tirana = 0 : Public, Static, Literal, HasDefault
+    Cities Algiers = 1 : Public, Static, Literal, HasDefault
+    Cities Luanda = 2 : Public, Static, Literal, HasDefault
+    Cities Saint_johns = 3 : Public, Static, Literal, HasDefault
+    Cities Buenos_aires = 4 : Public, Static, Literal, HasDefault
+    Cities Cordoba = 5 : Public, Static, Literal, HasDefault
+    Cities Yerevan = 6 : Public, Static, Literal, HasDefault
+    Cities Canberra = 7 : Public, Static, Literal, HasDefault
+    Cities Sydney = 8 : Public, Static, Literal, HasDefault
+    Cities Alice_springs = 9 : Public, Static, Literal, HasDefault
+    Cities Darwin = 10 : Public, Static, Literal, HasDefault
+    Cities Brisbane = 11 : Public, Static, Literal, HasDefault
+    Cities Cairns = 12 : Public, Static, Literal, HasDefault
+    Cities Adelaide = 13 : Public, Static, Literal, HasDefault
+    Cities Hobart = 14 : Public, Static, Literal, HasDefault
+    Cities Melbourne = 15 : Public, Static, Literal, HasDefault
+    Cities Eucla = 16 : Public, Static, Literal, HasDefault
+    Cities Perth = 17 : Public, Static, Literal, HasDefault
+    Cities Vienna = 18 : Public, Static, Literal, HasDefault
+    Cities Baku = 19 : Public, Static, Literal, HasDefault
+    Cities Nassau = 20 : Public, Static, Literal, HasDefault
+    Cities Manama = 21 : Public, Static, Literal, HasDefault
+    Cities Dhaka = 22 : Public, Static, Literal, HasDefault
+    Cities Bridgetown = 23 : Public, Static, Literal, HasDefault
+    Cities Minsk = 24 : Public, Static, Literal, HasDefault
+    Cities Brussels = 25 : Public, Static, Literal, HasDefault
+    Cities Belmopan = 26 : Public, Static, Literal, HasDefault
+    Cities Porto_novo = 27 : Public, Static, Literal, HasDefault
+    Cities Hamilton = 28 : Public, Static, Literal, HasDefault
+    Cities Thimphu = 29 : Public, Static, Literal, HasDefault
+    Cities La_paz = 30 : Public, Static, Literal, HasDefault
+    Cities Sarajevo = 31 : Public, Static, Literal, HasDefault
+    Cities Gaborone = 32 : Public, Static, Literal, HasDefault
+    Cities Rio_branco = 33 : Public, Static, Literal, HasDefault
+    Cities Manaus = 34 : Public, Static, Literal, HasDefault
+    Cities Salvador = 35 : Public, Static, Literal, HasDefault
+    Cities Fortaleza = 36 : Public, Static, Literal, HasDefault
+    Cities Brasilia = 37 : Public, Static, Literal, HasDefault
+    Cities Belem = 38 : Public, Static, Literal, HasDefault
+    Cities Recife = 39 : Public, Static, Literal, HasDefault
+    Cities Rio_de_janeiro = 40 : Public, Static, Literal, HasDefault
+    Cities Sao_paulo = 41 : Public, Static, Literal, HasDefault
+    Cities Bandar_seri_begawan = 42 : Public, Static, Literal, HasDefault
+    Cities Sofia = 43 : Public, Static, Literal, HasDefault
+    Cities Bujumbura = 44 : Public, Static, Literal, HasDefault
+    Cities Praia = 45 : Public, Static, Literal, HasDefault
+    Cities Phnom_penh = 46 : Public, Static, Literal, HasDefault
+    Cities Yaounde = 47 : Public, Static, Literal, HasDefault
+    Cities Calgary = 48 : Public, Static, Literal, HasDefault
+    Cities Edmonton = 49 : Public, Static, Literal, HasDefault
+    Cities Vancouver = 50 : Public, Static, Literal, HasDefault
+    Cities Winnipeg = 51 : Public, Static, Literal, HasDefault
+    Cities Saint_john = 52 : Public, Static, Literal, HasDefault
+    Cities Happy_valley_goose_bay = 53 : Public, Static, Literal, HasDefault
+    Cities Mary_s_harbour = 54 : Public, Static, Literal, HasDefault
+    Cities St_johns = 55 : Public, Static, Literal, HasDefault
+    Cities Inuvik = 56 : Public, Static, Literal, HasDefault
+    Cities Yellowknife = 57 : Public, Static, Literal, HasDefault
+    Cities Halifax = 58 : Public, Static, Literal, HasDefault
+    Cities Baker_lake = 59 : Public, Static, Literal, HasDefault
+    Cities Coral_harbour = 60 : Public, Static, Literal, HasDefault
+    Cities Eureka = 61 : Public, Static, Literal, HasDefault
+    Cities Grise_fiord = 62 : Public, Static, Literal, HasDefault
+    Cities Pond_inlet = 63 : Public, Static, Literal, HasDefault
+    Cities Resolute = 64 : Public, Static, Literal, HasDefault
+    Cities Ottawa = 65 : Public, Static, Literal, HasDefault
+    Cities Toronto = 66 : Public, Static, Literal, HasDefault
+    Cities Blanc_sablon = 67 : Public, Static, Literal, HasDefault
+    Cities Chibougamau = 68 : Public, Static, Literal, HasDefault
+    Cities Kuujjuaq = 69 : Public, Static, Literal, HasDefault
+    Cities Montreal = 70 : Public, Static, Literal, HasDefault
+    Cities Quebec = 71 : Public, Static, Literal, HasDefault
+    Cities Regina = 72 : Public, Static, Literal, HasDefault
+    Cities Whitehorse = 73 : Public, Static, Literal, HasDefault
+    Cities Georgetown = 74 : Public, Static, Literal, HasDefault
+    Cities Bangui = 75 : Public, Static, Literal, HasDefault
+    Cities Ndjamena = 76 : Public, Static, Literal, HasDefault
+    Cities Easter_island = 77 : Public, Static, Literal, HasDefault
+    Cities Punta_arenas = 78 : Public, Static, Literal, HasDefault
+    Cities Santiago = 79 : Public, Static, Literal, HasDefault
+    Cities Beijing = 80 : Public, Static, Literal, HasDefault
+    Cities Chongqing = 81 : Public, Static, Literal, HasDefault
+    Cities Shenzhen = 82 : Public, Static, Literal, HasDefault
+    Cities Suzhou = 83 : Public, Static, Literal, HasDefault
+    Cities Shanghai = 84 : Public, Static, Literal, HasDefault
+    Cities Lhasa = 85 : Public, Static, Literal, HasDefault
+    Cities Urumqi = 86 : Public, Static, Literal, HasDefault
+    Cities Bogota = 87 : Public, Static, Literal, HasDefault
+    Cities Moroni = 88 : Public, Static, Literal, HasDefault
+    Cities Brazzaville = 89 : Public, Static, Literal, HasDefault
+    Cities Kinshasa = 90 : Public, Static, Literal, HasDefault
+    Cities Rarotonga = 91 : Public, Static, Literal, HasDefault
+    Cities San_jose = 92 : Public, Static, Literal, HasDefault
+    Cities Abidjan = 93 : Public, Static, Literal, HasDefault
+    Cities Yamoussoukro = 94 : Public, Static, Literal, HasDefault
+    Cities Zagreb = 95 : Public, Static, Literal, HasDefault
+    Cities Havana = 96 : Public, Static, Literal, HasDefault
+    Cities Nicosia = 97 : Public, Static, Literal, HasDefault
+    Cities Prague = 98 : Public, Static, Literal, HasDefault
+    Cities Copenhagen = 99 : Public, Static, Literal, HasDefault
+    Cities Djibouti = 100 : Public, Static, Literal, HasDefault
+    Cities Roseau = 101 : Public, Static, Literal, HasDefault
+    Cities Santo_domingo = 102 : Public, Static, Literal, HasDefault
+    Cities Guayaquil = 103 : Public, Static, Literal, HasDefault
+    Cities Quito = 104 : Public, Static, Literal, HasDefault
+    Cities Cairo = 105 : Public, Static, Literal, HasDefault
+    Cities San_salvador = 106 : Public, Static, Literal, HasDefault
+    Cities Malabo = 107 : Public, Static, Literal, HasDefault
+    Cities Tallinn = 108 : Public, Static, Literal, HasDefault
+    Cities Addis_ababa = 109 : Public, Static, Literal, HasDefault
+    Cities Stanley = 110 : Public, Static, Literal, HasDefault
+    Cities Torshavn = 111 : Public, Static, Literal, HasDefault
+    Cities Suva = 112 : Public, Static, Literal, HasDefault
+    Cities Helsinki = 113 : Public, Static, Literal, HasDefault
+    Cities Kemi = 114 : Public, Static, Literal, HasDefault
+    Cities Rovaniemi = 115 : Public, Static, Literal, HasDefault
+    Cities Paris = 116 : Public, Static, Literal, HasDefault
+    Cities Cayenne = 117 : Public, Static, Literal, HasDefault
+    Cities Papeete = 118 : Public, Static, Literal, HasDefault
+    Cities Martin_de_vivies_amsterdam_island = 119 : Public, Static, Literal, HasDefault
+    Cities Port_aux_francais = 120 : Public, Static, Literal, HasDefault
+    Cities Libreville = 121 : Public, Static, Literal, HasDefault
+    Cities Banjul = 122 : Public, Static, Literal, HasDefault
+    Cities Tbilisi = 123 : Public, Static, Literal, HasDefault
+    Cities Berlin = 124 : Public, Static, Literal, HasDefault
+    Cities Frankfurt = 125 : Public, Static, Literal, HasDefault
+    Cities Accra = 126 : Public, Static, Literal, HasDefault
+    Cities Gibraltar = 127 : Public, Static, Literal, HasDefault
+    Cities Athens = 128 : Public, Static, Literal, HasDefault
+    Cities Danmarkshavn = 129 : Public, Static, Literal, HasDefault
+    Cities Kangerlussuaq = 130 : Public, Static, Literal, HasDefault
+    Cities Nuuk = 131 : Public, Static, Literal, HasDefault
+    Cities Thule_air_base = 132 : Public, Static, Literal, HasDefault
+    Cities Saint_georges = 133 : Public, Static, Literal, HasDefault
+    Cities Basse_terre = 134 : Public, Static, Literal, HasDefault
+    Cities Guam_hagatna = 135 : Public, Static, Literal, HasDefault
+    Cities Guatemala = 136 : Public, Static, Literal, HasDefault
+    Cities Bissau = 137 : Public, Static, Literal, HasDefault
+    Cities Port_au_prince = 138 : Public, Static, Literal, HasDefault
+    Cities Tegucigalpa = 139 : Public, Static, Literal, HasDefault
+    Cities Hong_kong = 140 : Public, Static, Literal, HasDefault
+    Cities Budapest = 141 : Public, Static, Literal, HasDefault
+    Cities Reykjavik = 142 : Public, Static, Literal, HasDefault
+    Cities Patna = 143 : Public, Static, Literal, HasDefault
+    Cities Delhi = 144 : Public, Static, Literal, HasDefault
+    Cities New_delhi = 145 : Public, Static, Literal, HasDefault
+    Cities Bangalore = 146 : Public, Static, Literal, HasDefault
+    Cities Thiruvananthapuram = 147 : Public, Static, Literal, HasDefault
+    Cities Indore = 148 : Public, Static, Literal, HasDefault
+    Cities Mumbai = 149 : Public, Static, Literal, HasDefault
+    Cities Pune = 150 : Public, Static, Literal, HasDefault
+    Cities Bhubaneshwar = 151 : Public, Static, Literal, HasDefault
+    Cities Ahmedgarh = 152 : Public, Static, Literal, HasDefault
+    Cities Ludhiana = 153 : Public, Static, Literal, HasDefault
+    Cities Chennai = 154 : Public, Static, Literal, HasDefault
+    Cities Varanasi = 155 : Public, Static, Literal, HasDefault
+    Cities Kolkata = 156 : Public, Static, Literal, HasDefault
+    Cities Denpasar = 157 : Public, Static, Literal, HasDefault
+    Cities Surabaya = 158 : Public, Static, Literal, HasDefault
+    Cities Balikpapan = 159 : Public, Static, Literal, HasDefault
+    Cities Jakarta = 160 : Public, Static, Literal, HasDefault
+    Cities Manado = 161 : Public, Static, Literal, HasDefault
+    Cities Jayapura = 162 : Public, Static, Literal, HasDefault
+    Cities Makassar = 163 : Public, Static, Literal, HasDefault
+    Cities Bandung = 164 : Public, Static, Literal, HasDefault
+    Cities Pontianak = 165 : Public, Static, Literal, HasDefault
+    Cities Manokwari = 166 : Public, Static, Literal, HasDefault
+    Cities Tehran = 167 : Public, Static, Literal, HasDefault
+    Cities Baghdad = 168 : Public, Static, Literal, HasDefault
+    Cities Dublin = 169 : Public, Static, Literal, HasDefault
+    Cities Douglas = 170 : Public, Static, Literal, HasDefault
+    Cities Jerusalem = 171 : Public, Static, Literal, HasDefault
+    Cities Tel_aviv = 172 : Public, Static, Literal, HasDefault
+    Cities Milan = 173 : Public, Static, Literal, HasDefault
+    Cities Rome = 174 : Public, Static, Literal, HasDefault
+    Cities Kingston = 175 : Public, Static, Literal, HasDefault
+    Cities Kobe = 176 : Public, Static, Literal, HasDefault
+    Cities Kyoto = 177 : Public, Static, Literal, HasDefault
+    Cities Nagoya = 178 : Public, Static, Literal, HasDefault
+    Cities Osaka = 179 : Public, Static, Literal, HasDefault
+    Cities Sapporo = 180 : Public, Static, Literal, HasDefault
+    Cities Tokyo = 181 : Public, Static, Literal, HasDefault
+    Cities Yokohama = 182 : Public, Static, Literal, HasDefault
+    Cities Amman = 183 : Public, Static, Literal, HasDefault
+    Cities Almaty = 184 : Public, Static, Literal, HasDefault
+    Cities Aqtobe = 185 : Public, Static, Literal, HasDefault
+    Cities Astana = 186 : Public, Static, Literal, HasDefault
+    Cities Oral = 187 : Public, Static, Literal, HasDefault
+    Cities Nairobi = 188 : Public, Static, Literal, HasDefault
+    Cities Kiritimati = 189 : Public, Static, Literal, HasDefault
+    Cities Pristina = 190 : Public, Static, Literal, HasDefault
+    Cities Kuwait_city = 191 : Public, Static, Literal, HasDefault
+    Cities Bishkek = 192 : Public, Static, Literal, HasDefault
+    Cities Vientiane = 193 : Public, Static, Literal, HasDefault
+    Cities Riga = 194 : Public, Static, Literal, HasDefault
+    Cities Beirut = 195 : Public, Static, Literal, HasDefault
+    Cities Vaduz = 196 : Public, Static, Literal, HasDefault
+    Cities Vilnius = 197 : Public, Static, Literal, HasDefault
+    Cities Luxembourg = 198 : Public, Static, Literal, HasDefault
+    Cities Skopje = 199 : Public, Static, Literal, HasDefault
+    Cities Antananarivo = 200 : Public, Static, Literal, HasDefault
+    Cities Kuala_lumpur = 201 : Public, Static, Literal, HasDefault
+    Cities Male = 202 : Public, Static, Literal, HasDefault
+    Cities Bamako = 203 : Public, Static, Literal, HasDefault
+    Cities Valletta = 204 : Public, Static, Literal, HasDefault
+    Cities Majuro = 205 : Public, Static, Literal, HasDefault
+    Cities Fort_de_france = 206 : Public, Static, Literal, HasDefault
+    Cities Nouakchott = 207 : Public, Static, Literal, HasDefault
+    Cities Port_louis = 208 : Public, Static, Literal, HasDefault
+    Cities Aguascalientes = 209 : Public, Static, Literal, HasDefault
+    Cities Mexicali = 210 : Public, Static, Literal, HasDefault
+    Cities Tijuana = 211 : Public, Static, Literal, HasDefault
+    Cities Mexico_city = 212 : Public, Static, Literal, HasDefault
+    Cities Acapulco = 213 : Public, Static, Literal, HasDefault
+    Cities Guadalajara = 214 : Public, Static, Literal, HasDefault
+    Cities Cancun = 215 : Public, Static, Literal, HasDefault
+    Cities Mazatlan = 216 : Public, Static, Literal, HasDefault
+    Cities Hermosillo = 217 : Public, Static, Literal, HasDefault
+    Cities Veracruz = 218 : Public, Static, Literal, HasDefault
+    Cities Palikir = 219 : Public, Static, Literal, HasDefault
+    Cities Chisinau = 220 : Public, Static, Literal, HasDefault
+    Cities Monaco = 221 : Public, Static, Literal, HasDefault
+    Cities Hovd = 222 : Public, Static, Literal, HasDefault
+    Cities Ulaanbaatar = 223 : Public, Static, Literal, HasDefault
+    Cities Podgorica = 224 : Public, Static, Literal, HasDefault
+    Cities Casablanca = 225 : Public, Static, Literal, HasDefault
+    Cities Rabat = 226 : Public, Static, Literal, HasDefault
+    Cities Maputo = 227 : Public, Static, Literal, HasDefault
+    Cities Yangon = 228 : Public, Static, Literal, HasDefault
+    Cities Windhoek = 229 : Public, Static, Literal, HasDefault
+    Cities Kathmandu = 230 : Public, Static, Literal, HasDefault
+    Cities Amsterdam = 231 : Public, Static, Literal, HasDefault
+    Cities Auckland = 232 : Public, Static, Literal, HasDefault
+    Cities Wellington = 233 : Public, Static, Literal, HasDefault
+    Cities Managua = 234 : Public, Static, Literal, HasDefault
+    Cities Niamey = 235 : Public, Static, Literal, HasDefault
+    Cities Lagos = 236 : Public, Static, Literal, HasDefault
+    Cities Alofi = 237 : Public, Static, Literal, HasDefault
+    Cities Pyongyang = 238 : Public, Static, Literal, HasDefault
+    Cities Longyearbyen = 239 : Public, Static, Literal, HasDefault
+    Cities Oslo = 240 : Public, Static, Literal, HasDefault
+    Cities Tromso = 241 : Public, Static, Literal, HasDefault
+    Cities Muscat = 242 : Public, Static, Literal, HasDefault
+    Cities Islamabad = 243 : Public, Static, Literal, HasDefault
+    Cities Karachi = 244 : Public, Static, Literal, HasDefault
+    Cities Lahore = 245 : Public, Static, Literal, HasDefault
+    Cities Ngerulmud = 246 : Public, Static, Literal, HasDefault
+    Cities Panama = 247 : Public, Static, Literal, HasDefault
+    Cities Port_moresby = 248 : Public, Static, Literal, HasDefault
+    Cities Asuncion = 249 : Public, Static, Literal, HasDefault
+    Cities Lima = 250 : Public, Static, Literal, HasDefault
+    Cities Manila = 251 : Public, Static, Literal, HasDefault
+    Cities Warsaw = 252 : Public, Static, Literal, HasDefault
+    Cities Lisbon = 253 : Public, Static, Literal, HasDefault
+    Cities Ponta_delgada_azores = 254 : Public, Static, Literal, HasDefault
+    Cities San_juan = 255 : Public, Static, Literal, HasDefault
+    Cities Doha = 256 : Public, Static, Literal, HasDefault
+    Cities Saint_denis = 257 : Public, Static, Literal, HasDefault
+    Cities Bucharest = 258 : Public, Static, Literal, HasDefault
+    Cities Belushya_guba = 259 : Public, Static, Literal, HasDefault
+    Cities Ufa = 260 : Public, Static, Literal, HasDefault
+    Cities Chelyabinsk = 261 : Public, Static, Literal, HasDefault
+    Cities Anadyr = 262 : Public, Static, Literal, HasDefault
+    Cities Pevek = 263 : Public, Static, Literal, HasDefault
+    Cities Irkutsk = 264 : Public, Static, Literal, HasDefault
+    Cities Kaliningrad = 265 : Public, Static, Literal, HasDefault
+    Cities Petropavlovsk_kamchatsky = 266 : Public, Static, Literal, HasDefault
+    Cities Komsomolsk_on_amur = 267 : Public, Static, Literal, HasDefault
+    Cities Khatanga = 268 : Public, Static, Literal, HasDefault
+    Cities Krasnoyarsk = 269 : Public, Static, Literal, HasDefault
+    Cities Norilsk = 270 : Public, Static, Literal, HasDefault
+    Cities Magadan = 271 : Public, Static, Literal, HasDefault
+    Cities Moscow = 272 : Public, Static, Literal, HasDefault
+    Cities Murmansk = 273 : Public, Static, Literal, HasDefault
+    Cities Novgorod = 274 : Public, Static, Literal, HasDefault
+    Cities Novosibirsk = 275 : Public, Static, Literal, HasDefault
+    Cities Omsk = 276 : Public, Static, Literal, HasDefault
+    Cities Perm = 277 : Public, Static, Literal, HasDefault
+    Cities Vladivostok = 278 : Public, Static, Literal, HasDefault
+    Cities Saint_peterburg = 279 : Public, Static, Literal, HasDefault
+    Cities Tiksi = 280 : Public, Static, Literal, HasDefault
+    Cities Verkhoyansk = 281 : Public, Static, Literal, HasDefault
+    Cities Yakutsk = 282 : Public, Static, Literal, HasDefault
+    Cities Yuzhno_sakhalinsk = 283 : Public, Static, Literal, HasDefault
+    Cities Samara = 284 : Public, Static, Literal, HasDefault
+    Cities Yekaterinburg = 285 : Public, Static, Literal, HasDefault
+    Cities Kazan = 286 : Public, Static, Literal, HasDefault
+    Cities Izhevsk = 287 : Public, Static, Literal, HasDefault
+    Cities Chita = 288 : Public, Static, Literal, HasDefault
+    Cities Kigali = 289 : Public, Static, Literal, HasDefault
+    Cities Jamestown = 290 : Public, Static, Literal, HasDefault
+    Cities Basseterre = 291 : Public, Static, Literal, HasDefault
+    Cities Castries = 292 : Public, Static, Literal, HasDefault
+    Cities Kingstown = 293 : Public, Static, Literal, HasDefault
+    Cities Apia = 294 : Public, Static, Literal, HasDefault
+    Cities San_marino = 295 : Public, Static, Literal, HasDefault
+    Cities Sao_tome = 296 : Public, Static, Literal, HasDefault
+    Cities Makkah = 297 : Public, Static, Literal, HasDefault
+    Cities Medina = 298 : Public, Static, Literal, HasDefault
+    Cities Riyadh = 299 : Public, Static, Literal, HasDefault
+    Cities Dakar = 300 : Public, Static, Literal, HasDefault
+    Cities Belgrade = 301 : Public, Static, Literal, HasDefault
+    Cities Victoria = 302 : Public, Static, Literal, HasDefault
+    Cities Singapore = 303 : Public, Static, Literal, HasDefault
+    Cities Bratislava = 304 : Public, Static, Literal, HasDefault
+    Cities Ljubljana = 305 : Public, Static, Literal, HasDefault
+    Cities Honiara = 306 : Public, Static, Literal, HasDefault
+    Cities Cape_town = 307 : Public, Static, Literal, HasDefault
+    Cities Johannesburg = 308 : Public, Static, Literal, HasDefault
+    Cities Marion_island_prince_edward_islands = 309 : Public, Static, Literal, HasDefault
+    Cities Pretoria = 310 : Public, Static, Literal, HasDefault
+    Cities Seoul = 311 : Public, Static, Literal, HasDefault
+    Cities Barcelona = 312 : Public, Static, Literal, HasDefault
+    Cities Madrid = 313 : Public, Static, Literal, HasDefault
+    Cities Palma = 314 : Public, Static, Literal, HasDefault
+    Cities Colombo = 315 : Public, Static, Literal, HasDefault
+    Cities Sri_jayawardenapura_kotte = 316 : Public, Static, Literal, HasDefault
+    Cities Khartoum = 317 : Public, Static, Literal, HasDefault
+    Cities Paramaribo = 318 : Public, Static, Literal, HasDefault
+    Cities Stockholm = 319 : Public, Static, Literal, HasDefault
+    Cities Bern = 320 : Public, Static, Literal, HasDefault
+    Cities Geneva = 321 : Public, Static, Literal, HasDefault
+    Cities Zurich = 322 : Public, Static, Literal, HasDefault
+    Cities Damascus = 323 : Public, Static, Literal, HasDefault
+    Cities Taipei = 324 : Public, Static, Literal, HasDefault
+    Cities Dushanbe = 325 : Public, Static, Literal, HasDefault
+    Cities Dar_es_salaam = 326 : Public, Static, Literal, HasDefault
+    Cities Dodoma = 327 : Public, Static, Literal, HasDefault
+    Cities Bangkok = 328 : Public, Static, Literal, HasDefault
+    Cities Lome = 329 : Public, Static, Literal, HasDefault
+    Cities Nukualofa = 330 : Public, Static, Literal, HasDefault
+    Cities Port_of_spain = 331 : Public, Static, Literal, HasDefault
+    Cities Tunis = 332 : Public, Static, Literal, HasDefault
+    Cities Ankara = 333 : Public, Static, Literal, HasDefault
+    Cities Istanbul = 334 : Public, Static, Literal, HasDefault
+    Cities Ashgabat = 335 : Public, Static, Literal, HasDefault
+    Cities Funafuti = 336 : Public, Static, Literal, HasDefault
+    Cities Kampala = 337 : Public, Static, Literal, HasDefault
+    Cities Dnipro = 338 : Public, Static, Literal, HasDefault
+    Cities Kyiv = 339 : Public, Static, Literal, HasDefault
+    Cities Odesa = 340 : Public, Static, Literal, HasDefault
+    Cities Abu_dhabi = 341 : Public, Static, Literal, HasDefault
+    Cities Dubai = 342 : Public, Static, Literal, HasDefault
+    Cities London = 343 : Public, Static, Literal, HasDefault
+    Cities Belfast = 344 : Public, Static, Literal, HasDefault
+    Cities Edinburgh = 345 : Public, Static, Literal, HasDefault
+    Cities Glasgow = 346 : Public, Static, Literal, HasDefault
+    Cities Cardiff = 347 : Public, Static, Literal, HasDefault
+    Cities Montevideo = 348 : Public, Static, Literal, HasDefault
+    Cities Midway = 349 : Public, Static, Literal, HasDefault
+    Cities Wake_island = 350 : Public, Static, Literal, HasDefault
+    Cities Montgomery = 351 : Public, Static, Literal, HasDefault
+    Cities Adak = 352 : Public, Static, Literal, HasDefault
+    Cities Anchorage = 353 : Public, Static, Literal, HasDefault
+    Cities Fairbanks = 354 : Public, Static, Literal, HasDefault
+    Cities Juneau = 355 : Public, Static, Literal, HasDefault
+    Cities Unalaska = 356 : Public, Static, Literal, HasDefault
+    Cities Phoenix = 357 : Public, Static, Literal, HasDefault
+    Cities Little_rock = 358 : Public, Static, Literal, HasDefault
+    Cities Los_angeles = 359 : Public, Static, Literal, HasDefault
+    Cities Sacramento = 360 : Public, Static, Literal, HasDefault
+    Cities San_diego = 361 : Public, Static, Literal, HasDefault
+    Cities San_francisco = 362 : Public, Static, Literal, HasDefault
+    Cities Denver = 363 : Public, Static, Literal, HasDefault
+    Cities Hartford = 364 : Public, Static, Literal, HasDefault
+    Cities Dover = 365 : Public, Static, Literal, HasDefault
+    Cities Washington_dc = 366 : Public, Static, Literal, HasDefault
+    Cities Miami = 367 : Public, Static, Literal, HasDefault
+    Cities Orlando = 368 : Public, Static, Literal, HasDefault
+    Cities Pensacola = 369 : Public, Static, Literal, HasDefault
+    Cities Atlanta = 370 : Public, Static, Literal, HasDefault
+    Cities Honolulu = 371 : Public, Static, Literal, HasDefault
+    Cities Boise = 372 : Public, Static, Literal, HasDefault
+    Cities Chicago = 373 : Public, Static, Literal, HasDefault
+    Cities Indianapolis = 374 : Public, Static, Literal, HasDefault
+    Cities Des_moines = 375 : Public, Static, Literal, HasDefault
+    Cities Topeka = 376 : Public, Static, Literal, HasDefault
+    Cities Louisville = 377 : Public, Static, Literal, HasDefault
+    Cities New_orleans = 378 : Public, Static, Literal, HasDefault
+    Cities Augusta = 379 : Public, Static, Literal, HasDefault
+    Cities Baltimore = 380 : Public, Static, Literal, HasDefault
+    Cities Boston = 381 : Public, Static, Literal, HasDefault
+    Cities Detroit = 382 : Public, Static, Literal, HasDefault
+    Cities Minneapolis = 383 : Public, Static, Literal, HasDefault
+    Cities St_paul = 384 : Public, Static, Literal, HasDefault
+    Cities Jackson = 385 : Public, Static, Literal, HasDefault
+    Cities Kansas_city = 386 : Public, Static, Literal, HasDefault
+    Cities St_louis = 387 : Public, Static, Literal, HasDefault
+    Cities Billings = 388 : Public, Static, Literal, HasDefault
+    Cities Lincoln = 389 : Public, Static, Literal, HasDefault
+    Cities Las_vegas = 390 : Public, Static, Literal, HasDefault
+    Cities Concord = 391 : Public, Static, Literal, HasDefault
+    Cities Newark = 392 : Public, Static, Literal, HasDefault
+    Cities Albuquerque = 393 : Public, Static, Literal, HasDefault
+    Cities New_york = 394 : Public, Static, Literal, HasDefault
+    Cities Raleigh = 395 : Public, Static, Literal, HasDefault
+    Cities Bismarck = 396 : Public, Static, Literal, HasDefault
+    Cities Columbus = 397 : Public, Static, Literal, HasDefault
+    Cities Oklahoma_city = 398 : Public, Static, Literal, HasDefault
+    Cities Portland_or = 399 : Public, Static, Literal, HasDefault
+    Cities Salem = 400 : Public, Static, Literal, HasDefault
+    Cities Philadelphia = 401 : Public, Static, Literal, HasDefault
+    Cities Providence = 402 : Public, Static, Literal, HasDefault
+    Cities Columbia = 403 : Public, Static, Literal, HasDefault
+    Cities Rapid_city = 404 : Public, Static, Literal, HasDefault
+    Cities Sioux_falls = 405 : Public, Static, Literal, HasDefault
+    Cities Knoxville = 406 : Public, Static, Literal, HasDefault
+    Cities Nashville = 407 : Public, Static, Literal, HasDefault
+    Cities Austin = 408 : Public, Static, Literal, HasDefault
+    Cities Dallas = 409 : Public, Static, Literal, HasDefault
+    Cities Houston = 410 : Public, Static, Literal, HasDefault
+    Cities Midland = 411 : Public, Static, Literal, HasDefault
+    Cities Salt_lake_city = 412 : Public, Static, Literal, HasDefault
+    Cities Montpelier = 413 : Public, Static, Literal, HasDefault
+    Cities Richmond = 414 : Public, Static, Literal, HasDefault
+    Cities Seattle = 415 : Public, Static, Literal, HasDefault
+    Cities Charleston_wv = 416 : Public, Static, Literal, HasDefault
+    Cities Madison = 417 : Public, Static, Literal, HasDefault
+    Cities Milwaukee = 418 : Public, Static, Literal, HasDefault
+    Cities Cheyenne = 419 : Public, Static, Literal, HasDefault
+    Cities Tashkent = 420 : Public, Static, Literal, HasDefault
+    Cities Port_vila = 421 : Public, Static, Literal, HasDefault
+    Cities Vatican_city = 422 : Public, Static, Literal, HasDefault
+    Cities Caracas = 423 : Public, Static, Literal, HasDefault
+    Cities Hanoi = 424 : Public, Static, Literal, HasDefault
+    Cities Ho_chi_minh = 425 : Public, Static, Literal, HasDefault
+    Cities El_aaiun = 426 : Public, Static, Literal, HasDefault
+    Cities Lusaka = 427 : Public, Static, Literal, HasDefault
+    Cities Harare = 428 : Public, Static, Literal, HasDefault

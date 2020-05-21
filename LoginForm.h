@@ -266,6 +266,7 @@ namespace OAIPProject {
 			this->Controls->Add(this->textBoxPASS);
 			this->Controls->Add(this->textBoxLOGIN);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
 			this->Name = L"LoginForm";

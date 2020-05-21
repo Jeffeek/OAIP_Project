@@ -1,0 +1,165 @@
+Типы наследования public, private и protected в С++
+
+Права доступа при наследовании ведут себя по-разному в зависимости от типа наследования.
+
+Для спецификации доступа в С++ есть три уровня: private, protected и public.
+
+Само наследование также может быть private, protected и public.
+
+По умолчанию классы наследуются, как private, а структуры - как public.
+
+Важно понимать, что независимо от типа наследования, ни один из наследников не сможет получить доступ к private-данным базового класса.
+
+private наследование
+Данные protected и public базового класса доступны из методов производного класса, но недоступны извне, то есть они становятся private.
+
+Пример private наследования
+class Base
+{
+  private:
+    int privateBase;
+  protected:
+    int protBase;
+  public:
+    int pubBase;
+};
+
+class Derived : private Base
+{
+  //унаследованные данные класса
+  //недоступно:
+  // int privateBase;
+  //private:
+  // int protBase;
+  //private:
+  // int pubBase;
+
+  public:
+    void updateDerived()
+    {
+      //privateBase=0; //нельзя получить доступ 
+                       //к private данным Base
+      protBase=0;
+      pubBase=0;
+    }
+};
+
+class Derived1 : public Derived
+{
+  public:
+    void updateDerived1()
+    {
+      //privateBase=1; //нельзя получить доступ 
+                       //к private данным Base
+      //protBase=1;//protBase недоступно, 
+                   //потому что Derived использовал 
+                   //private при наследовании от Base
+      //pubBase=1; //pubBase недоступно, потому что 
+                   //Derived использовал private 
+                   //при наследовании от Base
+    }
+};
+
+int main()
+{
+
+    //При вызове извне, получить доступ не получится ни к чему
+
+
+    Derived dd;
+    //dd.privateBase=3; недоступно
+    //dd.protBase=3; недоступно
+    //dd.pubBase=3; недоступно
+}
+protected наследование
+Данные, которые в CBase были protected и public становятся protected.
+
+Применение protected наследования в реальном коде практически не встречается, однако он встречается в тестах и на собеседованиях
+
+Пример protected наследования
+class Derived : protected Base
+{
+  //унаследованные данные класса
+  //недоступно:
+  // int privateBase;
+  //protected:
+  // int protBase;
+  //protected:
+  // int pubBase;
+
+  public:
+    void updateDerived()
+    {
+      //privateBase=0; //нельзя получить доступ к 
+                       //private данным Base
+      protBase=0;
+      pubBase=0;
+    }
+};
+
+class Derived1 : public Derived
+{
+  public:
+    void updateDerived1()
+    {
+      //privateBase=1; //нельзя получить доступ к 
+                       //private данным Base
+      protBase=1; //а тут уже все в порядке, 
+                  //в Derived они стали protected
+      pubBase=1;  // что значит, что наследник имеет 
+                  //к ним доступ
+    }
+};
+
+int main()
+{
+    Derived dd;
+    //dd.privateBase=3; недоступно
+    //dd.protBase=3; недоступно
+    //dd.pubBase=3; недоступно
+}
+public наследование
+Публичное наследование наиболее употребительно. При этом protected и public данные из базового класса остаются, соответственно protected и public в производном классе.
+
+Пример public наследования
+class Derived : public Base
+{
+  //унаследованные данные класса
+  //недоступно:
+  // int privateBase;
+  //protected:
+  // int protBase;
+  //public:
+  // int pubBase;
+
+  public:
+    void updateDerived()
+    {
+      //privateBase=0; //нельзя получить доступ к
+                       //private данным Base
+      protBase=0;
+      pubBase=0;
+    }
+};
+
+class Derived1 : public Derived
+{
+  public:
+    void updateDerived1()
+    {
+      //privateBase=1; //нельзя получить доступ к
+                       //private данным Base
+      protBase=1;
+      pubBase=1;
+    }
+};
+
+
+int main()
+{
+    Derived dd;
+    //dd.privateBase=3;
+    //dd.protBase=3;
+    dd.pubBase=3; //pubBase остался с уровнем доступа public,
+                  //к нему теперь можно получить доступ.
+}

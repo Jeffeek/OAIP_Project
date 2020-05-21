@@ -1,0 +1,11 @@
+﻿  AdminMain.cpp
+  ForgotPassword.cpp
+  LoginForm.cpp
+  MAINform.cpp
+  Quest.cpp
+  RegistrationForm.cpp
+  Themes.cpp
+  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
+  Создание кода...
+  AdminMain.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  OAIP_Project.vcxproj -> E:\projectsVS\OAIP_Project\Release\OAIP_Project.exe

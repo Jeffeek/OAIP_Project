@@ -259,6 +259,7 @@ namespace OAIPProject {
 			this->Controls->Add(this->textBox_RegLogin);
 			this->Controls->Add(this->gunaLabel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"RegistrationForm";
 			this->Opacity = 0.8;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;

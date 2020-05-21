@@ -1,0 +1,115 @@
+Примеры применения полиморфизма в С++
+
+
+Полиморфизм — одна из трех основных парадигм ООП. Если говорить кратко, полиморфизм — это способность обьекта использовать методы производного класса, который не существует на момент создания базового. Для тех, кто не особо сведущ в ООП, это, наверно, звучит сложно. Поэтому рассмотрим применение полиморфизма на примере.
+
+Постановка задачи
+
+Предположим, на сайте нужны три вида публикаций — новости, объявления и статьи. В чем-то они похожи — у всех них есть заголовок и текст, у новостей и объявлений есть дата. В чем-то они разные — у статей есть авторы, у новостей — источники, а у объявлений — дата, после которой оно становится не актуальным.
+
+Самые простые варианты, которые приходят в голову — написать три отдельных класса и работать с ними. Или написать один класс, в которым будут все свойства, присущие всем трем типам публикаций, а задействоваться будут только нужные. Но ведь для разных типов аналогичные по логике методы должны работать по-разному. Делать несколько однотипных методов для разных типов (get_news, get_announcements, get_articles) — это уже совсем неграмотно. Тут нам и поможет полиморфизм.
+
+
+Пример использования динамического полиморфизма.
+
+Построена иерархия игровых юнитов, где базовым является абстрактный полиморфный тип Unit, его наследник Human также является абстрактным, так как не реализует чисто виртуальный метод getDamage(), а классы Soldier и Civil
+
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <cstdlib>
+using namespace std;
+class Unit{
+protected:
+    int health;
+    virtual string getInfo() = 0;
+public:
+    Unit(int _health)
+        :health(_health)
+    {}
+    virtual void getDamage(int damage) = 0;
+friend ostream& operator<<(ostream &out, Unit *a);
+friend ostream& operator<<(ostream &out, Unit &a);
+};
+ostream& operator<<(ostream &out, Unit *a)
+{
+    out << a->getInfo();
+    return out;
+}
+ostream& operator<<(ostream &out, Unit &a)
+{
+    out << a.getInfo();
+    return out;
+}
+class Human:public Unit{
+public:
+    Human(int _health):Unit(_health)
+    {}
+};
+class Soldier:public Human{
+private:
+    static const int max_health = 100;
+protected:
+    string getInfo()
+    {
+        stringstream info;
+        info << "Soldier, health = " << health;
+        return info.str();
+    }
+public:
+    Soldier():Human(max_health)
+    {}
+    void getDamage(int damage)
+    {
+        if (health > damage) {
+            health -= damage;
+        } else {
+            health = 0;
+        }
+    }
+};
+class Civil:public Human{
+private:
+    static const int max_health = 100;
+protected:
+    string getInfo()
+    {
+        stringstream info;
+        info << "Soldier, health = " << health;
+        return info.str();
+    }
+public:
+    Civil():Human(max_health)
+    {}
+    void getDamage(int damage)
+    {
+        damage *= 2;
+        if (health > damage) {
+            health -= damage;
+        } else {
+            health = 0;
+        }
+    }
+};
+int main()
+{
+    //Unit b(100); //Can't create!
+    //Human c(100); //Can't create!
+    Unit *a[5];
+    for(int i = 0; i < 5; i++) {
+        if (rand()%2 == 1) {
+            a[i] = new Soldier();
+        } else {
+            a[i] = new Civil();
+        }
+    }
+    for(int i = 0; i < 5; i++) {
+        cout << *a[i] << endl;
+        a[i]->getDamage(10);
+        cout << a[i] << endl << endl;
+    }
+    return 0;
+}
+Можно убедиться, что в массиве указателей на юниты лежат разные типы юнитов.
+
+При этом каждый из них обрабатывается соответствующим ему образом.
