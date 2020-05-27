@@ -1,4 +1,3 @@
-E:\projectsVS\OAIP_Project\Release\OAIP_Project.vcxprojAssemblyReference.cache
 E:\projectsVS\OAIP_Project\Release\OAIPProject.AdminMain.resources
 E:\projectsVS\OAIP_Project\Release\OAIPProject.ForgotPassword.resources
 E:\projectsVS\OAIP_Project\Release\OAIPProject.LoginForm.resources

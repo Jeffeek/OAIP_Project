@@ -119,7 +119,7 @@ namespace OAIPProject {
 			this->comboBox_OpenTable->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->comboBox_OpenTable->BackColor = System::Drawing::Color::Transparent;
 			this->comboBox_OpenTable->BorderRadius = 3;
-			this->comboBox_OpenTable->Font = (gcnew System::Drawing::Font(L"Impact", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->comboBox_OpenTable->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->comboBox_OpenTable->ForeColor = System::Drawing::Color::White;
 			this->comboBox_OpenTable->Items = gcnew cli::array< System::String^  >(3) { L"ÞÇÅÐÛ", L"ÒÅÌÛ", L"ÒÅÑÒÛ" };
@@ -138,7 +138,6 @@ namespace OAIPProject {
 			// 
 			// DataGridTables
 			// 
-			this->DataGridTables->AllowUserToDeleteRows = false;
 			dataGridViewCellStyle1->BackColor = System::Drawing::Color::White;
 			this->DataGridTables->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this->DataGridTables->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;

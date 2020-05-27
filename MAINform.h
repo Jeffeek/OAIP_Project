@@ -40,6 +40,7 @@ namespace OAIPProject {
 	private: XanderUI::XUIRadio^ xuiRadioQ_2;
 	private: XanderUI::XUIRadio^ xuiRadioQ_1;
 	private: Bunifu::Framework::UI::BunifuImageButton^ bunifuImageButtonQUESTION;
+	private: Guna::UI::WinForms::GunaSwitch^ switchTheme;
 	private: System::Windows::Forms::RichTextBox^ richTextBoxTEST_TEXT;
 		
 	public:
@@ -91,6 +92,7 @@ namespace OAIPProject {
 			this->bunifuDropdownDIFFICULTY = (gcnew Bunifu::Framework::UI::BunifuDropdown());
 			this->checkedListBoxTHEMES = (gcnew System::Windows::Forms::CheckedListBox());
 			this->panelHEADER = (gcnew System::Windows::Forms::Panel());
+			this->switchTheme = (gcnew Guna::UI::WinForms::GunaSwitch());
 			this->labelThemesCount = (gcnew System::Windows::Forms::Label());
 			this->labelID = (gcnew System::Windows::Forms::Label());
 			this->panelMAIN = (gcnew System::Windows::Forms::Panel());
@@ -174,6 +176,7 @@ namespace OAIPProject {
 			// panelHEADER
 			// 
 			this->panelHEADER->BackColor = System::Drawing::Color::MediumVioletRed;
+			this->panelHEADER->Controls->Add(this->switchTheme);
 			this->panelHEADER->Controls->Add(this->labelThemesCount);
 			this->panelHEADER->Controls->Add(this->labelID);
 			this->panelHEADER->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
@@ -184,6 +187,20 @@ namespace OAIPProject {
 			this->panelHEADER->TabIndex = 2;
 			this->panelHEADER->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MAINform::panelHEADER_MouseDown);
 			this->panelHEADER->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MAINform::panelHEADER_MouseMove);
+			// 
+			// switchTheme
+			// 
+			this->switchTheme->BaseColor = System::Drawing::SystemColors::Control;
+			this->switchTheme->Checked = true;
+			this->switchTheme->CheckedOffColor = System::Drawing::Color::DarkGray;
+			this->switchTheme->CheckedOnColor = System::Drawing::Color::DarkTurquoise;
+			this->switchTheme->FillColor = System::Drawing::Color::White;
+			this->switchTheme->Location = System::Drawing::Point(408, 2);
+			this->switchTheme->Name = L"switchTheme";
+			this->switchTheme->Size = System::Drawing::Size(28, 20);
+			this->switchTheme->TabIndex = 24;
+			this->switchTheme->Visible = false;
+			this->switchTheme->CheckedChanged += gcnew System::EventHandler(this, &MAINform::switchTheme_CheckedChanged);
 			// 
 			// labelThemesCount
 			// 
@@ -290,23 +307,23 @@ namespace OAIPProject {
 			this->panelTest->Controls->Add(this->richTextBoxTEST_TEXT);
 			this->panelTest->Location = System::Drawing::Point(5, 419);
 			this->panelTest->Name = L"panelTest";
-			this->panelTest->Size = System::Drawing::Size(666, 234);
+			this->panelTest->Size = System::Drawing::Size(666, 226);
 			this->panelTest->TabIndex = 23;
 			// 
 			// xuiRadioQ_3
 			// 
 			this->xuiRadioQ_3->Checked = false;
-			this->xuiRadioQ_3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->xuiRadioQ_3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->xuiRadioQ_3->ForeColor = System::Drawing::Color::Turquoise;
-			this->xuiRadioQ_3->Location = System::Drawing::Point(75, 133);
+			this->xuiRadioQ_3->Location = System::Drawing::Point(75, 136);
 			this->xuiRadioQ_3->Name = L"xuiRadioQ_3";
 			this->xuiRadioQ_3->RadioColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
 				static_cast<System::Int32>(static_cast<System::Byte>(250)));
 			this->xuiRadioQ_3->RadioHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(98)));
 			this->xuiRadioQ_3->RadioStyle = XanderUI::XUIRadio::Style::Android;
-			this->xuiRadioQ_3->Size = System::Drawing::Size(531, 25);
+			this->xuiRadioQ_3->Size = System::Drawing::Size(531, 28);
 			this->xuiRadioQ_3->TabIndex = 12;
 			this->xuiRadioQ_3->Text = L"xuiRadio3";
 			this->xuiRadioQ_3->Click += gcnew System::EventHandler(this, &MAINform::xuiRadioQ_Click);
@@ -314,17 +331,17 @@ namespace OAIPProject {
 			// xuiRadioQ_2
 			// 
 			this->xuiRadioQ_2->Checked = false;
-			this->xuiRadioQ_2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->xuiRadioQ_2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->xuiRadioQ_2->ForeColor = System::Drawing::Color::Turquoise;
-			this->xuiRadioQ_2->Location = System::Drawing::Point(75, 105);
+			this->xuiRadioQ_2->Location = System::Drawing::Point(75, 107);
 			this->xuiRadioQ_2->Name = L"xuiRadioQ_2";
 			this->xuiRadioQ_2->RadioColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
 				static_cast<System::Int32>(static_cast<System::Byte>(250)));
 			this->xuiRadioQ_2->RadioHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(98)));
 			this->xuiRadioQ_2->RadioStyle = XanderUI::XUIRadio::Style::Android;
-			this->xuiRadioQ_2->Size = System::Drawing::Size(531, 25);
+			this->xuiRadioQ_2->Size = System::Drawing::Size(531, 28);
 			this->xuiRadioQ_2->TabIndex = 11;
 			this->xuiRadioQ_2->Text = L"xuiRadio2";
 			this->xuiRadioQ_2->Click += gcnew System::EventHandler(this, &MAINform::xuiRadioQ_Click);
@@ -332,7 +349,7 @@ namespace OAIPProject {
 			// xuiRadioQ_1
 			// 
 			this->xuiRadioQ_1->Checked = false;
-			this->xuiRadioQ_1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->xuiRadioQ_1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->xuiRadioQ_1->ForeColor = System::Drawing::Color::Turquoise;
 			this->xuiRadioQ_1->Location = System::Drawing::Point(75, 77);
@@ -342,7 +359,7 @@ namespace OAIPProject {
 			this->xuiRadioQ_1->RadioHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(98)));
 			this->xuiRadioQ_1->RadioStyle = XanderUI::XUIRadio::Style::Android;
-			this->xuiRadioQ_1->Size = System::Drawing::Size(531, 25);
+			this->xuiRadioQ_1->Size = System::Drawing::Size(531, 28);
 			this->xuiRadioQ_1->TabIndex = 10;
 			this->xuiRadioQ_1->Text = L"xuiRadio1";
 			this->xuiRadioQ_1->Click += gcnew System::EventHandler(this, &MAINform::xuiRadioQ_Click);
@@ -382,7 +399,7 @@ namespace OAIPProject {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->BackColor = System::Drawing::Color::Black;
-			this->ClientSize = System::Drawing::Size(676, 417);
+			this->ClientSize = System::Drawing::Size(676, 418);
 			this->ControlBox = false;
 			this->Controls->Add(this->panelTest);
 			this->Controls->Add(this->imageButton_exit);
@@ -683,6 +700,17 @@ private: System::Void panelHEADER_MouseMove(System::Object^ sender, System::Wind
 private: System::Void panelHEADER_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
 {
 	lastPoint = e->Location;
+}
+private: System::Void switchTheme_CheckedChanged(System::Object^ sender, System::EventArgs^ e) 
+{
+	if (switchTheme->Checked)
+	{
+		this->BackColor = Color::Black;
+	}
+	else
+	{
+		this->BackColor = Color::White;
+	}
 }
 };
 }

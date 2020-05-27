@@ -128,13 +128,14 @@ namespace OAIPProject {
 			// 
 			// textBoxPASS
 			// 
+			this->textBoxPASS->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->textBoxPASS->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->textBoxPASS->Font = (gcnew System::Drawing::Font(L"Unispace", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->textBoxPASS->ForeColor = System::Drawing::Color::CornflowerBlue;
-			this->textBoxPASS->HintForeColor = System::Drawing::Color::Empty;
+			this->textBoxPASS->HintForeColor = System::Drawing::Color::Aqua;
 			this->textBoxPASS->HintText = L"";
-			this->textBoxPASS->isPassword = true;
+			this->textBoxPASS->isPassword = false;
 			this->textBoxPASS->LineFocusedColor = System::Drawing::Color::Aqua;
 			this->textBoxPASS->LineIdleColor = System::Drawing::Color::MediumTurquoise;
 			this->textBoxPASS->LineMouseHoverColor = System::Drawing::Color::MediumOrchid;
@@ -270,7 +271,6 @@ namespace OAIPProject {
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
 			this->Name = L"LoginForm";
-			this->Opacity = 0.9;
 			this->SizeGripStyle = System::Windows::Forms::SizeGripStyle::Hide;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"LoginForm";
@@ -287,9 +287,7 @@ namespace OAIPProject {
 #pragma endregion
 private: System::Void LoginForm_Load(System::Object^ sender, System::EventArgs^ e) 
 {
-	//TODO: сапюрэ юбрнкнц
-	textBoxLOGIN->Text = "test";
-	textBoxPASS->Text = "123456";
+	
 }
 private: System::Void imageButton_login_Click(System::Object^ sender, System::EventArgs^ e) 
 {
